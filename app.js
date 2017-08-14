@@ -74,7 +74,7 @@ app.use(function (req, res, next) {
     res.locals.error = req.flash('error');
     res.locals.user = req.user || null;
     next();
-});herokul
+});
 
 
 app.use('/', routes);
