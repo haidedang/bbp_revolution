@@ -11,7 +11,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
-// mongodb://localhost:27017/bbp
+// mongoose.connect('mongodb://localhost:27017/bbp');
 mongoose.connect('mongodb://jd:triforceindia@ds013579.mlab.com:13579/bbp');
 var db = mongoose.connection;
 
