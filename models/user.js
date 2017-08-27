@@ -17,7 +17,15 @@ var UserSchema = mongoose.Schema({
     email: {
         type: String
     },
+    active: {
+        type: Boolean, required: true, default: false
+    },
+    secretToken: {
+        type: String
+    }
 });
+
+
 
 var User = module.exports = mongoose.model('User', UserSchema);
 

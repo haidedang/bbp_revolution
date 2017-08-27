@@ -10,6 +10,7 @@
     "body-parser": "*",
     "connect-flash": "*",
     "cookie-parser": "^1.4.1",
+    "email-verification": "^0.4.6",
     "express": "*",
     "express-handlebars": "*",
     "express-messages": "*",
@@ -17,12 +18,16 @@
     "express-validator": "*",
     "mongodb": "*",
     "mongoose": "*",
+    "nodemailer": "^4.0.1",
     "passport": "*",
     "passport-http": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "randomstring": "*",
+    "sendgrid": "^5.2.2",
+    "nodemailer-sendgrid-transport": "*"
   },
   "engines": {
-    "node":"6.10.0",
+    "node": "6.10.0",
     "npm": "3.10.10"
   }
 }
