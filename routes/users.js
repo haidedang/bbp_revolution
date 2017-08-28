@@ -69,7 +69,7 @@ router.post('/register/', (req, res) => {
     req.checkBody('email', 'Email is required.').notEmpty();
     req.checkBody('username', 'Username already in use').isUsernameAvailable();
     req.checkBody('email', 'Email is not valid.').isEmail();
-    //req.checkBody('email', 'Email already in use').isEmailAvailable();
+    req.checkBody('email', 'Email already in use').isEmailAvailable();
     req.checkBody('password', 'Password is required').notEmpty();
 
     // generate random string
@@ -94,7 +94,7 @@ router.post('/register/', (req, res) => {
             var fromEmail = new helper.Email('betterbackpacking@gmail.com');
             var toEmail = new helper.Email(newUser.email);
             var subject = 'Confirm your email';
-            var content = new helper.Content('text/html', 'a<a target=_blank href=\"' + authenticationURL + '\">Confirm your email</a>');
+            var content = new helper.Content('text/html', '<a target=_blank href=\"' + authenticationURL + '\">Confirm your email</a>');
             var mail = new helper.Mail(fromEmail, subject, toEmail, content);
 
             var sg = require('sendgrid')('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');

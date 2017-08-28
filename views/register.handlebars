@@ -4,41 +4,53 @@
         <div class="alert alert-danger">{{msg}}</div>
     {{/each}}
 {{/if}}
-<div class="container-fluid stylish-form container container-table">
-    <div class="row mar20 registration" >
-        <div class="text-center col-md-12 col-sm-12 col-xs-12">
-            <div class="inner-section">
-                <form method="POST" action="/users/register">
-                    <div class="mar20 inside-form">
-                        <h2 class="font_white text-center">SIGN UP</h2>
-                        <ul>
-                            <li class="icon-holder dsp-flex">
-                                <i class="fa fa-facebook "></i>
-                            </li>
-                            <li class="icon-holder dsp-flex">
-                                <i class="fa fa-twitter "></i>
-                            </li>
-                            <li class="icon-holder dsp-flex">
-                                <i class="fa fa-instagram "></i>
-                            </li>
-                        </ul>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
-                            <input type="text" class="form-control" name="username" placeholder="User Name...">
-                        </div>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-envelope "></i></span>
-                            <input type="email" class="form-control" name="email" placeholder="Email...">
-                        </div>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-lock "></i></span>
-                            <input type="password" class="form-control" name="password" placeholder="Password...">
-                        </div>
-                        <button type="submit" class="btn btn-default">Start Backpack!</button>
+<div class=" login container text-center">
+
+    <div  class=" col-md-12 col-sm-12 col-xs-12" >
+        <a id="bbp" href="/"><img style="width:7em; " alt="logo" src="/images/logo_white.svg"> </a>
+    </div>
+
+    <div class="text-center col-md-12 col-sm-12 col-xs-12">
+        <div class="inner-section">
+            <form method="POST" action="/users/register">
+                <div class="mar20 inside-form">
+                    <h2 class="font_white text-center">Create Account</h2>
+                    <ul>
+                        <li class="icon-holder dsp-flex">
+                            <i class="fa fa-facebook "></i>
+                        </li>
+                        <li class="icon-holder dsp-flex">
+                            <i class="fa fa-twitter "></i>
+                        </li>
+                        <li class="icon-holder dsp-flex">
+                            <i class="fa fa-instagram "></i>
+                        </li>
+                    </ul>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-pencil "></i></span>
+                        <input type="text" class="form-control" name="username" placeholder="User Name...">
                     </div>
-                </form>
-            </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope "></i></span>
+                        <input type="email" class="form-control" name="email" placeholder="Email...">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock "></i></span>
+                        <input type="password" class="form-control" name="password" placeholder="Password...">
+                    </div>
+                    <button type="submit" class="btn btn-default">Start Backpack!</button>
+                </div>
+            </form>
         </div>
     </div>
+
+    <div class="col-xs-12 col-lg-12" >
+        <p> Already have an Account?
+            <a href="/users/login"> Sign in</a>
+        </p>
+    </div>
+
 </div>
+
+
 
