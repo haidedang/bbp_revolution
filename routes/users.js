@@ -69,7 +69,7 @@ router.post('/register/', (req, res) => {
     req.checkBody('email', 'Email is required.').notEmpty();
     req.checkBody('username', 'Username already in use').isUsernameAvailable();
     req.checkBody('email', 'Email is not valid.').isEmail();
-    req.checkBody('email', 'Email already in use').isEmailAvailable();
+    // req.checkBody('email', 'Email already in use').isEmailAvailable();
     req.checkBody('password', 'Password is required').notEmpty();
 
     // generate random string
@@ -215,10 +215,13 @@ passport.deserializeUser(function(id, done) {
 router.post('/login',
     passport.authenticate('local', {successRedirect:'/', failureRedirect:'/users/login',failureFlash: true}),
     function(req, res) {
-        res.redirect('/');
+        res.redirect('/' );
     });
 
 router.get('/logout', function(req, res){
+    console.log('success')
+    console.log(req.user.username);
+
     req.logout();
 
     req.flash('success_msg', 'You are logged out');
@@ -226,6 +229,28 @@ router.get('/logout', function(req, res){
     res.redirect('/users/login');
 });
 
+function loggedIn(req, res, next) {
+    if (req.user) {
+        console.log(req.user.username);
+        next();
+    } else {
+        res.redirect('/users/login');
+    }
+}
+
+router.get('/chat', loggedIn, function(req, res, next) {
+    // req.user - will exist
+    // load user orders and render them
+
+    console.log(req.user.username);
+    res.render('chat');
+
+});
+
+router.get('/', function(req, res){
+    console.log(req.user.username)
+    res.send(req.user.username);
+})
 
 
 module.exports = router;

@@ -24,7 +24,9 @@
     "passport-local": "*",
     "randomstring": "*",
     "sendgrid": "^5.2.2",
-    "nodemailer-sendgrid-transport": "*"
+    "nodemailer-sendgrid-transport": "*",
+    "mongodb": "^2.2.30",
+    "socket.io": "^2.0.3"
   },
   "engines": {
     "node": "6.10.0",

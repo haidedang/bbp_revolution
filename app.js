@@ -8,18 +8,108 @@ var flash = require('connect-flash');
 var session = require('express-session');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
-var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var nev = require('email-verification') (mongoose);
 
-// mongoose.connect('mongodb://localhost:27017/bbp');
-mongoose.connect('mongodb://jd:triforceindia@ds013579.mlab.com:13579/bbp');
+
+// mongoose.connect('mongodb://jd:triforceindia@ds013579.mlab.com:13579/bbp');
+mongoose.connect('mongodb://localhost:27017/bbp')
 var db = mongoose.connection;
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+var server   = require('http').Server(app);
+var client       = require('socket.io')(server);
+var nicknames = [];
+
+// Mongo Chat
+const mongo = require('mongodb').MongoClient;
+
+mongo.connect('mongodb://127.0.0.1/bbp', function(err, db){
+    if(err){
+        throw err;
+    }
+
+    console.log('MongoDB connected...');
+
+    client.on('connection', function(socket){
+        // https://www.youtube.com/watch?v=dOSIqJWQkXM
+        socket.on('usernames', function(data){
+            if( nicknames.indexOf(data.name)!= -1){
+                updateNicknames();
+            } else {
+                nicknames.push(data.name);
+                updateNicknames();
+            }
+
+        });
+
+        function updateNicknames(){
+            client.emit('usernames', nicknames);
+        }
+
+        socket.on('disconnect', function(data){
+            console.log('disconnect!')
+            nicknames.splice(nicknames.indexOf(data.name), 1);
+            console.log(nicknames);
+            updateNicknames();
+        })
+
+        let chat = db.collection('chats');
+
+        // Create function to send status
+        sendStatus = function(s){
+            socket.emit('status', s);
+        }
+
+        // Get chats from mongo collection
+        chat.find().limit(100).sort({_id:1}).toArray(function(err, res){
+            if(err){
+                throw err;
+            }
+
+            // Emit the messages
+            socket.emit('output', res);
+        });
+
+        // Handle input events
+        socket.on('input', function(data, callback){
+
+
+
+            let name = data.name;
+            let message = data.message;
+
+            // Check for name and message
+            if(name == '' || message == ''){
+                // Send error status
+                sendStatus('Please enter a name and message');
+            } else {
+                // Insert message
+                chat.insert({name: name, message: message}, function(){
+                    client.emit('output', [data]);
+
+                    // Send status object
+                    sendStatus({
+                        message: 'Message sent',
+                        clear: true
+                    });
+                });
+            }
+        });
+
+        // Handle clear
+        socket.on('clear', function(data){
+            // Remove all chats from collection
+            chat.remove({}, function(){
+                // Emit cleared
+                socket.emit('cleared');
+            });
+        });
+    });
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -81,10 +171,12 @@ app.use(function (req, res, next) {
 app.use('/', routes);
 app.use('/users', users);
 
+
+
 // Set Port
 app.set('port', (process.env.PORT || 3000));
 
-app.listen(app.get('port'), function(){
+server.listen(app.get('port'), function(){
     console.log('Server started on port ' + app.get('port'));
 });
 

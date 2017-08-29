@@ -24,6 +24,12 @@
                 <li>
                     <a class="page-scroll" href="#last">Kontakt</a>
                 </li>
+                {{#if user}}
+                    <li>
+                        <a title="chat" href="users/chat">Chat</a>
+                    </li>
+                {{/if}}
+
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -48,6 +54,7 @@
                     <li>
                         <a title="register" href="/users/register">Register</a>
                     </li>
+
                 {{/if}}
             </ul>
         </div>
