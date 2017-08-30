@@ -214,8 +214,8 @@ passport.deserializeUser(function(id, done) {
 
 router.post('/login',
     passport.authenticate('local', {successRedirect:'/', failureRedirect:'/users/login',failureFlash: true}),
-    function(req, res) {
-        res.redirect('/' );
+    function(req, res){
+        res.redirect('/');
     });
 
 router.get('/logout', function(req, res){

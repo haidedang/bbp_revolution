@@ -696,3 +696,24 @@ input::placeholder {
 .login{
     margin-top:6rem;
 }
+
+.userlist{
+    margin-top:12em;
+
+}
+
+/*messages */
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.chat-message{
+    margin-top:5px;
+    /*padding:15px;
+    margin: 5px 10px 0;
+    background: #1ddced;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 10px;*/
+}

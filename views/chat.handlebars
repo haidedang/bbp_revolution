@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
 <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
 <title>MongoChat</title>
 <style>
@@ -7,17 +7,21 @@
 
 <div class="container">
     <div class="row">
+        <div  class="col-lg-4 col-sm-3 userlist">
+            <h4> Users online</h4>
+            <div id="users"></div>
+        </div>
         <div class="col-md-6 offset-md-3 col-sm-12">
             <h1 class="text-center">
-                MongoChat
+                <a id="bbp" href="/">
+                <img style="width:4em; " alt="logo" src="/images/logo_white.svg"> </a> Lounge
                 <button id="clear" class="btn btn-danger">Clear</button>
             </h1>
             <div id="status"></div>
             <div id="chat">
-                <input type="text" id="username" class="form-control" placeholder="Enter name...">
                 <br>
                 <div class="card">
-                    <div id="messages" class="card-block">
+                    <div id="messages" style="overflow:scroll;" class="card-block">
 
                     </div>
                 </div>
@@ -25,9 +29,9 @@
                 <textarea id="textarea" class="form-control" placeholder="Enter message..."></textarea>
             </div>
         </div>
+
     </div>
 
-    <div id="users"></div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
@@ -66,21 +70,19 @@
         if(socket !== undefined){
             console.log('Connected to socket...');
 
-            var username;
+            var actualusername;
 
             $.ajax({
                 url: 'http://localhost:3000/users',
                 cache: false,
                 success: function(data){
                     console.log(data);
-                    username = data;
+                    actualusername = data;
                     socket.emit('usernames', {
-                        name: username
+                        name: data
                     });
                 }
             });
-
-
 
 
             // Handle Output
@@ -91,15 +93,16 @@
                         // Build out message div
                         var message = document.createElement('div');
                         message.setAttribute('class', 'chat-message');
-                        message.textContent = data[x].name+": "+data[x].message;
+                        message.textContent = data[x].name + ": " +data[x].message;
                         messages.appendChild(message);
-                        messages.insertBefore(message, messages.firstChild);
+                        messages.scrollTop = messages.scrollHeight;
+//                        messages.insertBefore(message, messages.firstChild)   ;
                     }
                 }
             });
 
             // Handle Display of usernames
-            socket.on('usernames', function(data){
+            socket.on('nicknames', function(data){
                 console.log('klappt')
                 var html = ' ';
                 for (i=0; i< data.length; i++){
@@ -108,7 +111,7 @@
                 }
 
                 $('#users').html('');
-                $('#users').append('<div class="help-block">' + html + '</div>');
+                $('#users').append('<p class=" help-block">' + html + '</p>');
             })
 
             // Get Status From Server
@@ -128,7 +131,7 @@
                 if(event.which === 13 && event.shiftKey == false){
                     // Emit to server input
                     socket.emit('input', {
-                        name: username,
+                        name: actualusername,
                         message:textarea.value
                     });
 

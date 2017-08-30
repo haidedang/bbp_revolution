@@ -12,8 +12,8 @@ var mongoose = require('mongoose');
 var nev = require('email-verification') (mongoose);
 
 
-mongoose.connect('mongodb://jd:triforceindia@ds013579.mlab.com:13579/bbp');
-// mongoose.connect('mongodb://localhost:27017/bbp')
+// mongoose.connect('mongodb://jd:triforceindia@ds013579.mlab.com:13579/bbp');
+mongoose.connect('mongodb://localhost:27017/bbp')
 var db = mongoose.connection;
 
 var routes = require('./routes/index');
@@ -27,35 +27,49 @@ var nicknames = [];
 // Mongo Chat
 const mongo = require('mongodb').MongoClient;
 
-// mongo.connect('mongodb://127.0.0.1/bbp', function(err, db){
-mongo.connect('mongodb://jd:triforceindia@ds013579.mlab.com:13579/bbp', function(err, db){
+mongo.connect('mongodb://127.0.0.1/bbp', function(err, db){
+// mongo.connect('mongodb://jd:triforceindia@ds013579.mlab.com:13579/bbp', function(err, db){
     if(err){
         throw err;
     }
 
     console.log('MongoDB connected...');
 
+
+
     client.on('connection', function(socket){
+
+        var actualusername;
         // https://www.youtube.com/watch?v=dOSIqJWQkXM
         socket.on('usernames', function(data){
-            if( nicknames.indexOf(data.name)!= -1){
+            actualusername = data.name;
+            if( nicknames.indexOf(actualusername)!= -1){
                 updateNicknames();
             } else {
-                nicknames.push(data.name);
+
+                nicknames.push(actualusername);
                 updateNicknames();
+                console.log(nicknames)
             }
 
         });
 
         function updateNicknames(){
-            client.emit('usernames', nicknames);
+            client.emit('nicknames', nicknames);
         }
 
-        socket.on('disconnect', function(data){
+        socket.on('disconnect', function(){
             console.log('disconnect!')
-            nicknames.splice(nicknames.indexOf(data.name), 1);
-            console.log(nicknames);
-            updateNicknames();
+            console.log('ciao' + actualusername);
+            if( nicknames.indexOf(actualusername)!= -1){
+                nicknames.splice(nicknames.indexOf(actualusername), 1);
+                updateNicknames();
+                console.log(nicknames);
+            } else {
+                updateNicknames();
+                console.log(nicknames);
+            }
+
         })
 
         let chat = db.collection('chats');
@@ -76,9 +90,7 @@ mongo.connect('mongodb://jd:triforceindia@ds013579.mlab.com:13579/bbp', function
         });
 
         // Handle input events
-        socket.on('input', function(data, callback){
-
-
+        socket.on('input', function(data){
 
             let name = data.name;
             let message = data.message;
