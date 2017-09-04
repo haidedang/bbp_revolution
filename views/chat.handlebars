@@ -103,7 +103,10 @@
         }
 
         // Connect to socket.io
-        var socket = io.connect('http://127.0.0.1:3000/');
+//        var socket = io.connect('http://127.0.0.1:3000/');
+
+        var socket = io.connect('https://agile-ocean-40247.herokuapp.com/');
+
 
         // Check for connection
         if(socket !== undefined){
@@ -112,7 +115,8 @@
             var actualusername;
 
             $.ajax({
-                url: 'http://localhost:3000/users',
+//                url: 'http://localhost:3000/users',
+                url: 'https://agile-ocean-40247.herokuapp.com/users',
                 cache: false,
                 success: function(data){
                     console.log(data);
