@@ -106,7 +106,7 @@ router.post('/register/', (req, res) => {
 
             console.log("New user:", newUser);
 
-            var authenticationURL = 'http://agile-ocean-40247.herokuapp.com/users/verify_email?token=' + newUser.secretToken;
+            var authenticationURL = 'https://agile-ocean-40247.herokuapp.com/users/verify_email?token=' + newUser.secretToken;
             var helper = require('sendgrid').mail;
             var fromEmail = new helper.Email('betterbackpacking@gmail.com');
             var toEmail = new helper.Email(newUser.email);
