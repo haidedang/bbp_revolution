@@ -6,13 +6,8 @@ var expressValidator = require('express-validator');
 var randomstring = require('randomstring');
 var nodemailer = require('nodemailer');
 var mongoose = require('mongoose');
-var smtpTransport = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-        user: "haiduc.dang91@gmail.com",
-        pass: "Mpi1991nv!"
-    }
-});
+var Mailjet = require('node-mailjet').connect('b3986e30a129eeb3c0e06fc7f455ef6c', '022b92193d4c18f4084620611428409e');
+
 
 var User = require('../models/user');
 
@@ -56,7 +51,29 @@ router.use(expressValidator({
     })
 );
 
+function handleError (err) {
+    throw new Error(err.ErrorMessage);
+}
 
+function newContact (email) {
+    mailjet.post('contact')
+        .request({Email: email})
+        .catch(handleError);
+}
+
+function testEmail (text, html) {
+    email = {};
+    email.FromName = 'Your Name';
+    email.FromEmail = 'betterbackpacking@gmail.com';
+    email.Subject = 'Test Email';
+    email.Recipients = [{Email: 'haiduc.dang91@gmail.com'}];
+    email['Html-Part'] = text;
+
+
+    Mailjet.post('send')
+        .request(email)
+        .catch(handleError);
+}
 
 // Register User
 router.post('/register/', (req, res) => {
@@ -113,6 +130,21 @@ router.post('/register/', (req, res) => {
                 console.log(response.headers);
             });
 
+            function testEmail (text) {
+                Email = {};
+                Email.FromName = 'bbp';
+                Email.FromEmail = 'betterbackpacking@gmail.com';
+                Email.Subject = 'EmailVerification';
+                Email.Recipients = [{Email: newUser.email}];
+                Email['Html-Part'] = text;
+
+
+                Mailjet.post('send')
+                    .request(Email)
+                    .catch(handleError);
+            }
+
+            testEmail( '<a target=_blank href=' + authenticationURL + '>Confirm your email</a>');
 
         });
 
@@ -167,7 +199,23 @@ router.get('/verify_email', function(req,res) {
                 console.log(response.headers);
             });
 
+            // mailjet
 
+            function testEmail (text) {
+                Email = {};
+                Email.FromName = 'bbp';
+                Email.FromEmail = 'betterbackpacking@gmail.com';
+                Email.Subject = 'Email confirmed!';
+                Email.Recipients = [{Email: user.email}];
+                Email['text-Part'] = text;
+
+
+                Mailjet.post('send')
+                    .request(Email)
+                    .catch(handleError);
+            }
+
+            testEmail( 'Awesome! You are a badass!');
 
             //update page
         });
