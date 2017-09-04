@@ -114,7 +114,7 @@
 
             var actualusername;
 
-            $.ajax({
+            /*$.ajax({
 //                url: 'http://localhost:3000/users',
                 url: 'https://agile-ocean-40247.herokuapp.com/users',
                 cache: false,
@@ -125,7 +125,15 @@
                         name: data
                     });
                 }
-            });
+            });*/
+
+            $.get('https://agile-ocean-40247.herokuapp.com/users'), function(data){
+                console.log(data);
+                actualusername=data;
+                socket.emit('usernames', {
+                    name: data
+                });
+            }
 
 
             // Handle Output
