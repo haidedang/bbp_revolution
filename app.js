@@ -35,8 +35,6 @@ mongo.connect('mongodb://jd:triforceindia@ds013579.mlab.com:13579/bbp', function
 
     console.log('MongoDB connected...');
 
-
-
     client.on('connection', function(socket){
 
         var actualusername;
