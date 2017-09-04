@@ -105,7 +105,7 @@
         // Connect to socket.io
 //        var socket = io.connect('http://127.0.0.1:3000/');
 
-        var socket = io.connect('http://agile-ocean-40247.herokuapp.com/');
+        var socket = io.connect('https://agile-ocean-40247.herokuapp.com/');
 
 
         // Check for connection
@@ -116,7 +116,7 @@
 
             $.ajax({
 //                url: 'http://localhost:3000/users',
-                url: 'http://agile-ocean-40247.herokuapp.com/users',
+                url: 'https://agile-ocean-40247.herokuapp.com/users',
                 cache: false,
                 success: function(data){
                     console.log(data);
