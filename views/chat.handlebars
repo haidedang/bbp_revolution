@@ -64,7 +64,10 @@
             </div>
         </div>
         <br>
-        <textarea id="textarea" class="form-control " placeholder="Enter message..."></textarea>
+        <form action="">
+            <input id="textarea" class = "form-control" placeholder="Enter message..." autocomplete="off" />
+        </form>
+        <!--<textarea id="textarea" class="form-control " placeholder="Enter message..."></textarea>-->
         <div id="status" style="display:none;"></div>
     </div>
 </div>
@@ -103,9 +106,9 @@
         }
 
         // Connect to socket.io
-//        var socket = io.connect('http://127.0.0.1:3000/');
+        var socket = io.connect('http://127.0.0.1:5000/');
 
-        var socket = io.connect('https://agile-ocean-40247.herokuapp.com/');
+//        var socket = io.connect('https://agile-ocean-40247.herokuapp.com/');
 
 
         // Check for connection
@@ -114,9 +117,9 @@
 
             var actualusername;
 
-            /*$.ajax({
-//                url: 'http://localhost:3000/users',
-                url: 'https://agile-ocean-40247.herokuapp.com/users',
+            $.ajax({
+                url: 'http://localhost:5000/users',
+//                url: 'https://agile-ocean-40247.herokuapp.com/users',
                 cache: false,
                 success: function(data){
                     console.log(data);
@@ -125,15 +128,15 @@
                         name: data
                     });
                 }
-            });*/
+            });
 
-            $.get('https://agile-ocean-40247.herokuapp.com/users'), function(data){
+            /*$.get('https://agile-ocean-40247.herokuapp.com/users'), function(data){
                 console.log(data);
                 actualusername=data;
                 socket.emit('usernames', {
                     name: data
                 });
-            }
+            }*/
 
 
             // Handle Output
@@ -176,7 +179,7 @@
             });
 
             // Handle Input
-            textarea.addEventListener('keydown', function(event){
+            /*textarea.addEventListener('keydown', function(event){
 
                 if(event.which === 13 && event.shiftKey == false){
                     // Emit to server input
@@ -187,7 +190,17 @@
 
                     event.preventDefault();
                 }
-            })
+            })*/
+
+            $('form').submit(function(){
+                socket.emit('input', {
+                    name: actualusername,
+                    message:textarea.value
+                });
+                $('#textarea').val('');
+                return false;
+            });
+
 
             // Handle Chat Clear
             clearBtn.addEventListener('click', function(){
