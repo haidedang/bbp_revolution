@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ALIVE tour</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <link rel="stylesheet" href="/travel/bootstrap.css">
+    <link rel="stylesheet" href="/travel/styles.css">
+    <link rel="stylesheet" href="/travel/owl.carousel.min.css">
+    <link rel="stylesheet" href="/travel/owl.theme.default.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
+
+<body>
+<nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" id="bbp" href="/"><img style="width:2em" alt="logo" src="/images/logo_white.svg"> </a>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-navbar">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="page-scroll" href="/travel">travel</a>
+                </li>
+
+                <li>
+                    <a class="page-scroll" href="/users/chat">live</a>
+                </li>
+
+                {{#if user}}
+                    <li>
+                        <a title="chat" href="users/chat">bbp Lounge</a>
+                    </li>
+                {{/if}}
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll"  title="ger" href="index.html"><img style="width: 2em;" src="/images/germany.png"> </a>
+                </li>
+                <li>
+                    <a class="page-scroll" title ="en" href="ENindex.html"><img style="width: 2em;" src="/images/England.png"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" data-toggle="modal" title="about" href="#aboutModal">Über uns</a>
+                </li>
+
+                {{#if user}}
+                    <li>
+                        <a title="logout" href="/users/logout">Logout</a>
+                    </li>
+                {{else}}
+
+                    <li>
+                        <a title="login" href="/users/login">Login</a>
+                    </li>
+                    <li>
+                        <a title="register" href="/users/register">Register</a>
+                    </li>
+
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="header">
+        <h1 class="big-string title">Alive tour</h1>
+    </div>
+    <div class="line col-md-8 col-md-offset-2"></div>
+</div>
+<div class="map-wrapper">
+    <div class="map" id="googlemaps">
+    </div>
+</div>
+<div id="days-wrapper" class="col-xs-12 col-sm-4 col-md-4 col-md-offset-0">
+    <li class="day-div">
+        <div class="day">DAY 1</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Shimla</h4>
+            <p>Arrival in Shimla, the capital of Himachal Pradesh</p>
+            <p>discover Shimla’s old town and “The Mall” by foot</p>
+            <p>visit the Jakhoo temple, highest point of Shimla</p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 2</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Sarahan</h4>
+            <p>Visit the Bhimakali Temple and a pheasantry</p>
+            <p>Shimla (2100m) to Sarahan (2300m)</p>
+            <p>3-hour hike to Hatupeak (3400m)</p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 3</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Kalpa</h4>
+            <p>Sarahan to Kalpa (2800m)</p>
+            <p>enjoy the massive Kinnaur Kailash (6050m) and its 7 color changes according to the sunbeam </p>
+            <p></p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 4</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Nako</h4>
+            <p>Kalpa to Nako (3700m)</p>
+            <p>hike around Nako lake</p>
+            <p></p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 5</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Tabo</h4>
+            <p>Nako to Tabo (3000m)</p>
+            <p>visit the 1000-year old Tabo Monastery</p>
+            <p></p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 6</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Dhankar</h4>
+            <p>Tabo to Dhankar (3900m)</p>
+            <p>visit the Dhankar Monastery and hike up to the holy Dhankar Lake</p>
+            <p></p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 7</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Kaza</h4>
+            <p>Dhankar to Kaza (3800m)</p>
+            <p>visit the highest town, Comic (4600m)</p>
+            <p></p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 8</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Kaza</h4>
+            <p>Stay in Kaza</p>
+            <p>visit Kibbar (4200m) and Kye Monastery, the biggest monastery in Spiti</p>
+            <p></p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 9</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Manali</h4>
+            <p>Chandra Taal to Manali (2000m)</p>
+            <p>drive through Rohtang Pass (4000m) and go shopping in Manali</p>
+            <p>alternative: relaxed hike with impressive waterfalls at the end</p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 10</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Aru</h4>
+            <p>Manali to Aru (2400m)</p>
+            <p>drive to and hike around Aru Valley</p>
+            <p></p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 11</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Srinagar</h4>
+            <p>Aru to Srinagar</p>
+            <p>have a relaxed day at houseboat</p>
+            <p></p>
+        </div>
+    </li>
+</div>
+<div class="container">
+
+    <div class="line line1 col-md-8 col-md-offset-2"></div>
+    <p class="big-string uno col-md-7 col-md-offset-3">What's included?</p>
+    <div class="about about1 col-md-6 col-md-offset-3">
+        <div class="button button1">
+            <p class="all">ALL-IN-ONE</p>
+        </div>
+        <p class="click-here">click here to find out more</p>
+
+        <div class="button-container whats-included">
+            <div class="one"></div>
+            <div class="two">
+                <div class="about-text about-text1">
+                    <ul>
+                        <li>
+                            <p>All included:</p>
+                        </li>
+                        <li>
+                            <p>Transportation: four-wheel-drive jeep + driver (including fuel)</p>
+                        </li>
+                        <li>
+                            <p>Accommodation: hotels, mountain huts, and/or camping</p>
+                        </li>
+                        <li>
+                            <p>Food and drinks: breakfast, lunch, dinner + snacks</p>
+                        </li>
+                        <li>
+                            <p>24-hours guide</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="owl-carousel owl-theme about col-md-12">
+    <div class="item"><img src="images/pic1.png"></div>
+    <div class="item"><img src="images/pic2.png"></div>
+    <div class="item"><img src="images/pic3.png"></div>
+    <div class="item"><img src="images/pic4.png"></div>
+    <div class="item"><img src="images/pic5.png"></div>
+    <div class="item"><img src="images/pic6.png"></div>
+</div>
+<div class="container">
+    <div class="about about2 col-md-6 col-md-offset-3">
+        <p class="click-here click-here2">By clicking on this button, you’re going to be mediated to one of the local guides.
+        </p>
+        <div class="button button2">
+            <p class="all">better backpack now!</p>
+        </div>
+        <div class="button-container book-now">
+            <div class="one"></div>
+            <div class="two">
+                <div class="about-text">
+                    <form method="POST" action="contact-form-handler.php">
+                        <div class="small-group">
+                            <label><span>Your name:</span>
+                                <input type="text" name="name" placeholder="Your name.."></label>
+
+                            <label><span>Your surname:</span>
+                                <input type="text" name="surname" placeholder="Your surname.."></label>
+                        </div>
+                        <div class="long-group">
+                            <label><span>Your email:</span>
+                                <input type="email" name="_replyto" placeholder="Your email.."></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Your age:</span>
+                                <textarea name="age" placeholder="How old are you physically? And how old psychologically?.."></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Your travel duration:</span>
+                                <textarea name="duration" placeholder="How many days you are planning for your adventure? And especially when?.."></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Your experience:</span>
+                                <textarea name="experience" placeholder="What are your experiences with backpacking? What about trekking?.."></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Your fitness level</span>
+                                <textarea name="fitness" placeholder="How fit are you? Do you know your body and can you estimate your body capability in extreme situations, e.g. do you suffer from mountain sickness?.."></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Activities:</span>
+                                <textarea name="activities " placeholder="How many treks should be included in the tour?.."></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Accommodation:</span>
+                                <textarea name="accommodation" placeholder="Hilton, hostel or huts?.."></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Company:</span>
+                                <textarea name="company" placeholder="Are you open for more backpackers to join the adventure?.."></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Do you want to tell us anything else?</span>
+                                <textarea name="message" placeholder="Your message.."></textarea></label>
+                        </div>
+                        <input class="send-button" type="submit" value="Send">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="footer">
+</div>
+<!--    <div class="next col-xs-12 col-sm-4 col-md-4 col-md-offset-4">
+</div> -->
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<script src="/travel/jquery.min.js"></script>
+<script src="/travel/owl.carousel.min.js"></script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>-->
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAvBcmApfKtIdaYyvSKjfoDTLj4j-GKBvY"></script>
+<script src="/travel/script.js"></script>
+<script src="/js/scripts.js" ></script>
+</body>
+</html>
