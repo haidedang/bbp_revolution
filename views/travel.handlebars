@@ -1,79 +1,28 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>ALIVE tour</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
-    <meta name="viewport" content="width = device-width, initial-scale = 1">
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="utf-8">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
 
-    <link rel="stylesheet" href="/travel/bootstrap.css">
-    <link rel="stylesheet" href="/travel/styles.css">
-    <link rel="stylesheet" href="/travel/owl.carousel.min.css">
-    <link rel="stylesheet" href="/travel/owl.theme.default.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-</head>
+    <!--<title>ALIVE tour</title>-->
+    <!--<meta name="description" content="The HTML5 Herald">-->
+    <!--<meta name="author" content="SitePoint">-->
+    <!--<meta name="viewport" content="width = device-width, initial-scale = 1">-->
 
-<body>
-<nav id="topNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand page-scroll" id="bbp" href="/"><img style="width:2em" alt="logo" src="/images/logo_white.svg"> </a>
-        </div>
-        <div class="navbar-collapse collapse" id="bs-navbar">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a class="page-scroll" href="/travel">travel</a>
-                </li>
+    <!--<link rel="stylesheet" href="/travel/bootstrap.css">-->
+    <!--<link rel="stylesheet" href="/travel/styles.css">-->
+    <!--<link rel="stylesheet" href="/travel/owl.carousel.min.css">-->
+    <!--<link rel="stylesheet" href="/travel/owl.theme.default.min.css">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">-->
+<!--</head>-->
 
-                <li>
-                    <a class="page-scroll" href="/users/chat">live</a>
-                </li>
+<!--<body>-->
+<link rel="stylesheet" href="/travel/css/styles.css">
+<link rel="stylesheet" href="/travel/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/travel/css/owl.theme.default.min.css">
 
-                {{#if user}}
-                    <li>
-                        <a title="chat" href="users/chat">bbp Lounge</a>
-                    </li>
-                {{/if}}
-
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll"  title="ger" href="index.html"><img style="width: 2em;" src="/images/germany.png"> </a>
-                </li>
-                <li>
-                    <a class="page-scroll" title ="en" href="ENindex.html"><img style="width: 2em;" src="/images/England.png"></a>
-                </li>
-                <li>
-                    <a class="page-scroll" data-toggle="modal" title="about" href="#aboutModal">Über uns</a>
-                </li>
-
-                {{#if user}}
-                    <li>
-                        <a title="logout" href="/users/logout">Logout</a>
-                    </li>
-                {{else}}
-
-                    <li>
-                        <a title="login" href="/users/login">Login</a>
-                    </li>
-                    <li>
-                        <a title="register" href="/users/register">Register</a>
-                    </li>
-
-                {{/if}}
-            </ul>
-        </div>
-    </div>
-</nav>
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 <div class="container">
 
@@ -257,12 +206,12 @@
     </div>
 </div>
 <div class="owl-carousel owl-theme about col-md-12">
-    <div class="item"><img src="images/pic1.png"></div>
-    <div class="item"><img src="images/pic2.png"></div>
-    <div class="item"><img src="images/pic3.png"></div>
-    <div class="item"><img src="images/pic4.png"></div>
-    <div class="item"><img src="images/pic5.png"></div>
-    <div class="item"><img src="images/pic6.png"></div>
+    <div class="item"><img src="/travel/images/pic1.png"></div>
+    <div class="item"><img src="/travel/images/pic2.png"></div>
+    <div class="item"><img src="/travel/images/pic3.png"></div>
+    <div class="item"><img src="/travel/images/pic4.png"></div>
+    <div class="item"><img src="/travel/images/pic5.png"></div>
+    <div class="item"><img src="/travel/images/pic6.png"></div>
 </div>
 <div class="container">
     <div class="about about2 col-md-6 col-md-offset-3">
@@ -330,16 +279,19 @@
 </div>
 <div class="footer">
 </div>
+
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAvBcmApfKtIdaYyvSKjfoDTLj4j-GKBvY"></script>
 <!--    <div class="next col-xs-12 col-sm-4 col-md-4 col-md-offset-4">
 </div> -->
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<!--<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
+<!--<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
 
-<script src="/travel/jquery.min.js"></script>
-<script src="/travel/owl.carousel.min.js"></script>
-<!--<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>-->
-<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAvBcmApfKtIdaYyvSKjfoDTLj4j-GKBvY"></script>
-<script src="/travel/script.js"></script>
-<script src="/js/scripts.js" ></script>
-</body>
-</html>
+<!--<script src="/travel/js/jquery.min.js"></script>-->
+<!--<script src="/travel/js/owl.carousel.min.js"></script>-->
+<!--&lt;!&ndash;<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>&ndash;&gt;-->
+<!--<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAvBcmApfKtIdaYyvSKjfoDTLj4j-GKBvY"></script>-->
+<!--<script src="/travel/js/script.js"></script>-->
+<!--<script src="/travel/js/scripts.js" ></script>-->
+<!--</body>-->
+<!--</html>-->
+
