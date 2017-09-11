@@ -1,0 +1,262 @@
+/*body{*/
+    /*background: #282828 !important;*/
+/*}*/
+
+
+.two p, .text-wrapper p, .text-wrapper h4{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.header{
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+
+}
+.title{
+    transform: translateY(20px);
+}
+/*MAP*/
+.map-wrapper{
+    position: relative;
+}
+.map{
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+#googlemaps{
+     z-index: 0;
+     position: absolute;
+}
+/*END OF MAP*/
+/*DAYS*/
+#days-wrapper{
+    min-height: 900px;
+    margin-top: 54px;
+    position: relative;
+    z-index: 1; /* The z-index should be higher than Google Maps */
+}
+.day-div{
+    height: 50px;
+    width: 350px;
+    background: #302746;
+    border-radius: 7px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    -webkit-transition: height 1s;
+    -moz-transition: height 1s;
+    -o-transition: height 1s;
+    transition: height 1s;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+.day{
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 20pt;
+    float: left;
+}
+.day-plan{
+    display: none;
+}
+
+.day-plan .text-wrapper p {
+    color: #45494F;
+}
+.text-wrapper{
+    height: 250px;
+    width: 347px;
+    border-radius: 7px;
+    background: #f7f7f7;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.show{
+    background: url("images/show.png");
+    height: 50px;
+    width: 50px;
+    float: right;
+}
+.marker{
+    background: url("images/marker.png");
+    height: 42px;
+    width: 30px;
+    float: left;
+}
+/*END OF DAYS*/
+/*ABOUT*/
+.about{
+    text-align: center;
+    overflow: auto;
+    margin-bottom: 0px;
+}
+.about-text li{
+    display: block !important;
+}
+.line{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-top: 2px solid #b7b2c1;
+}
+.big-string{
+    color: #6a53a0;
+    font-style: italic;
+    font-family: Arial;
+    font-size: 50pt;
+    margin-top: 50px;
+}
+.uno{
+    transform: translateX(20px);
+}
+.about-text1{
+    transform: translateX(-20px);
+}
+.button{
+    background-color: #302746; /* Green */
+    padding: 15px 32px;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.all{
+    color: #fff;
+    font-family: Verdana;
+    font-size: 30pt;
+}
+.click-here{
+    color: #888889;
+    font-family: Arial;
+    font-size: 18pt;
+}
+.about-text{
+    margin-top: 20px;
+    overflow:hidden;
+}
+.button-container {
+    overflow:hidden;
+    height: 60px;
+    -webkit-transition: height 1s;
+    -moz-transition: height 1s;
+    -o-transition: height 1s;
+    transition: height 1s;
+}
+.one {
+    position: relative;
+    top: 0;
+    z-index: 1;
+    cursor:pointer;
+
+}
+.two {
+    position: relative;
+    top: -200px;
+    z-index: 1;
+    -webkit-transition: top 1s;
+    -moz-transition: top 1s;
+    -o-transition: top 1s;
+    transition: top 1s;
+}
+/*END OF ABOUT*/
+/*OWL CAROUSEL*/
+.item img{
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.owl-carousel {
+position: relative;
+}
+.owl-theme .owl-nav [class*=owl-]{
+    background: none !important;
+}
+.owl-prev,
+.owl-next {
+position: absolute;
+top: 50%;
+transform: translateY(-60%);
+}
+.owl-prev {
+left: 0;
+}
+.owl-next {
+right: 0;
+}
+.owl-item {
+    height: auto;
+}
+/*END OF OWL CAROUSEL*/
+/*BOOKNOW*/
+.click-here2{
+    margin-top: 100px;
+}
+.button2{
+    background: #a34b4b;
+}
+.book-now .two{
+    top: -1800px;
+}
+/*END OF OWL BOOKNOW*/
+.footer{
+    width: 100%;
+    height: 150px;
+
+}
+/*FORM*/
+form{
+    font-size: 20px;
+    font-weight: 200;
+    color: #8f949c;
+}
+form{
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+form input, form textarea{
+    border: 3px solid #a34b4b;
+    border-radius: 5px;
+}
+form input:focus, form textarea:focus{
+    outline: none;
+    border: 3px solid #af7c7c;
+}
+label{
+    display: block;
+    margin-bottom: 20px !important;
+}
+label span{
+    display: block;
+}
+.small-group label{
+    width: 48%;
+    margin-right: 2%;
+    float: left;
+}
+.long-group label, .message-group label{
+    width: 98%;
+}
+.long-group label input, .message-group label textarea{
+    width: 98%;
+}
+.message-group label textarea{
+    height: 120px;
+}
+.send-button{
+    margin-top: 25px;
+    width: 98%;
+    background: #7a2828;
+    color: #fff;
+}
+
+#topNav{
+    background-color:#282828;
+}
+/*END OF FORM*/
