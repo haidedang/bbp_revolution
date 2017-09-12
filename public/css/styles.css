@@ -165,6 +165,8 @@ footer {
 }
 .navbar-default .navbar-toggle, .navbar-default .navbar-collapse {
     border-color: transparent;
+    background-color: #282828;
+
 }
 
 .navbar-default .nav > li>a,
