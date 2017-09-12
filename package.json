@@ -16,7 +16,7 @@
     "express-messages": "*",
     "express-session": "*",
     "express-validator": "*",
-    "mongodb": "*",
+    "mongodb": "^2.2.30",
     "mongoose": "*",
     "nodemailer": "^4.0.1",
     "passport": "*",
@@ -25,7 +25,6 @@
     "randomstring": "*",
     "sendgrid": "^5.2.2",
     "nodemailer-sendgrid-transport": "*",
-    "mongodb": "^2.2.30",
     "socket.io": "^2.0.3",
     "node-mailjet": "^3.2.1"
   },

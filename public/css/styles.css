@@ -796,3 +796,7 @@ input::placeholder {
     color:rgb(176, 73, 39);
 }
 
+/*ADRIANNA UPDATE*/
+input{
+  color: #212428 !important;
+}

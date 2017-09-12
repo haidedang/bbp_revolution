@@ -60,6 +60,8 @@ $(".button2").on('click', function(){
     }
 });
 
+//initialize position for GOOGLEMAPS
+var position = [27.1959739, 78.02423269999997];
 //days loop
 var daysWrapper = document.getElementById('days-wrapper');
 
@@ -81,6 +83,9 @@ $("li:nth-child(1)").on('click', function(){
         $('html,body').animate({
             scrollTop: $(".map").offset().top},
       'slow');
+
+      //googlemaps position
+      position = [28.1959739, 80.02423269999997];
     }
     else
     {
@@ -288,7 +293,6 @@ $("li:nth-child(19)").on('click', function(){
 });
 
 //googlemaps
-var position = [27.1959739, 78.02423269999997];
 
 function showGoogleMaps() {
 
