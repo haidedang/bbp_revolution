@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="/travel/css/owl.theme.default.min.css">
 
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
 
 <div class="container">
 
@@ -225,16 +226,17 @@
             <div class="two">
                 <div class="about-text">
                     <form method="POST" action="contact-form-handler.php">
-                        <div class="small-group">
-                            <label><span>Your name:</span>
-                                <input type="text" name="name" placeholder="Your name.."></label>
-
+                        <div class="message-group short">
+                          <label><span>Your name:</span>
+                            <textarea name="name" placeholder="Your name.."></textarea></label>
+                          </div>
+                        <div class="message-group short">
                             <label><span>Your surname:</span>
-                                <input type="text" name="surname" placeholder="Your surname.."></label>
+                                <textarea name="surname" placeholder="Your surname.."></textarea></label>
                         </div>
-                        <div class="long-group">
+                        <div class="message-group short">
                             <label><span>Your email:</span>
-                                <input type="email" name="_replyto" placeholder="Your email.."></label>
+                                <textarea name="email" placeholder="Your email.."></textarea></label>
                         </div>
                         <div class="message-group">
                             <label><span>Your age:</span>
@@ -268,7 +270,7 @@
                             <label><span>Do you want to tell us anything else?</span>
                                 <textarea name="message" placeholder="Your message.."></textarea></label>
                         </div>
-                        <input class="send-button" type="submit" value="Send">
+                        <input class="send-button" type="submit" value="Send->">
                     </form>
                 </div>
             </div>
@@ -294,4 +296,3 @@
 <!--<script src="/travel/js/scripts.js" ></script>-->
 <!--</body>-->
 <!--</html>-->
-

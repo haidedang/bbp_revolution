@@ -269,7 +269,7 @@ $("li:nth-child(17)").on('click', function(){
         $("li:nth-child(18)").css({"display": "none"});
     }
 });
-//DAY 8
+//DAY 10
 $("li:nth-child(19)").on('click', function(){
 
     if(unclickedArr[19])
@@ -291,6 +291,28 @@ $("li:nth-child(19)").on('click', function(){
         $("li:nth-child(20)").css({"display": "none"});
     }
 });
+//DAY 11
+$("li:nth-child(21)").on('click', function(){
+
+    if(unclickedArr[21])
+    {
+        $(".map").css({"height": "125vh"});
+        $("li:nth-child(2n)").css({"display": "none"});
+        for (var i = 0; i < (daysWrapper.children.length); i++) {
+            unclickedArr[i] = true;
+        }
+        unclickedArr[21]=false;
+        $("li:nth-child(22)").css({"display": "inline"});
+        $('html,body').animate({
+            scrollTop: $(".map").offset().top},
+      'slow');
+    }
+    else
+    {
+        unclickedArr[21]=true;
+        $("li:nth-child(22)").css({"display": "none"});
+    }
+});
 
 //googlemaps
 
@@ -298,25 +320,51 @@ function showGoogleMaps() {
 
     var latLng = new google.maps.LatLng(position[0], position[1]);
 
-    var mapOptions = {
-        zoom: 16, // initialize zoom level - the max value is 21
-        gestureHandling: 'none',
-        streetViewControl: false, // hide the yellow Street View pegman
-        scaleControl: true, // allow users to zoom the Google Map
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        center: latLng
-    };
+    var locations = [
+      ['SHIMLA', 31.1048145, 77.1734033, 11],
+      ['SARAHAN', 31.5167835, 77.7938376, 10],
+      ['KALPA', 31.5376578, 78.2753776, 9],
+      ['NAKO', 31.8815167, 78.6274612, 8],
+      ['TABO', 32.0932775,78.3728707, 7]
+      ['DHANKAR', 32.0909872, 78.2278556, 6],
+      ['KAZA', 32.2275991, 78.0709903, 5],
+      ['KAZA', 32.24068253, 78.0619812, 4],
+      ['MANALI', 32.2396325, 77.1887145, 3],
+      ['ARU', 34.0886568, 75.2616768, 2]
+      ['SRINAGAR', 34.1066985,74.7365434, 1]
+    ];
 
-    map = new google.maps.Map(document.getElementById('googlemaps'),
-        mapOptions);
+    var map = new google.maps.Map(document.getElementById('googlemaps'), {
+      zoom: 9, // initialize zoom level - the max value is 21
+      gestureHandling: 'none',
+      streetViewControl: false, // hide the yellow Street View pegman
+      scaleControl: true, // allow users to zoom the Google Map
+      center: new google.maps.LatLng(31.6811552,77.9011197),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
 
     // Show the default red marker at the location
-    marker = new google.maps.Marker({
-        position: latLng,
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map,
         draggable: false,
         animation: google.maps.Animation.DROP
-    });
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+
 }
 
 google.maps.event.addDomListener(window, 'load', showGoogleMaps);
