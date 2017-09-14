@@ -741,6 +741,7 @@ input::placeholder {
     /*border: 2px solid white;*/
     height:100vh;
     width:100vh;
+    padding-top:75px;
 }
 
 #chatarea{

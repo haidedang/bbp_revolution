@@ -21,6 +21,7 @@ router.get('/login', function(req, res, next) {
     res.render('login', {layout:'loginLayout.handlebars'});
 });
 
+
 router.use(expressValidator({
         customValidators: {
             isUsernameAvailable(username) {
@@ -55,25 +56,6 @@ function handleError (err) {
     throw new Error(err.ErrorMessage);
 }
 
-function newContact (email) {
-    mailjet.post('contact')
-        .request({Email: email})
-        .catch(handleError);
-}
-
-function testEmail (text, html) {
-    email = {};
-    email.FromName = 'Your Name';
-    email.FromEmail = 'betterbackpacking@gmail.com';
-    email.Subject = 'Test Email';
-    email.Recipients = [{Email: 'haiduc.dang91@gmail.com'}];
-    email['Html-Part'] = text;
-
-
-    Mailjet.post('send')
-        .request(email)
-        .catch(handleError);
-}
 
 // Register User
 router.post('/register/', (req, res) => {
@@ -106,29 +88,7 @@ router.post('/register/', (req, res) => {
 
             console.log("New user:", newUser);
 
-            var authenticationURL = 'https://agile-ocean-40247.herokuapp.com/users/verify_email?token=' + newUser.secretToken;
-            var helper = require('sendgrid').mail;
-            var fromEmail = new helper.Email('betterbackpacking@gmail.com');
-            var toEmail = new helper.Email(newUser.email);
-            var subject = 'Confirm your email';
-            var content = new helper.Content('text/html', '<a target=_blank href=\"' + authenticationURL + '\">Confirm your email</a>');
-            var mail = new helper.Mail(fromEmail, subject, toEmail, content);
 
-            var sg = require('sendgrid')('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');
-            var request = sg.emptyRequest({
-                method: 'POST',
-                path: '/v3/mail/send',
-                body: mail.toJSON()
-            });
-
-            sg.API(request, function (error, response) {
-                if (error) {
-                    console.log('Error response received');
-                }
-                console.log(response.statusCode);
-                console.log(response.body);
-                console.log(response.headers);
-            });
 
             function testEmail (text) {
                 Email = {};
@@ -175,29 +135,6 @@ router.get('/verify_email', function(req,res) {
             console.log('succesfully updated user');
             console.log(user);
 
-
-            var helper = require('sendgrid').mail;
-            var fromEmail = new helper.Email('betterbackpacking@gmail.com');
-            var toEmail = new helper.Email(user.email);
-            var subject = 'Email confirmed';
-            var content = new helper.Content('text/html', 'Awesome! You are a badass!');
-            var mail = new helper.Mail(fromEmail, subject, toEmail, content);
-
-            var sg = require('sendgrid')('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');
-            var request = sg.emptyRequest({
-                method: 'POST',
-                path: '/v3/mail/send',
-                body: mail.toJSON()
-            });
-
-            sg.API(request, function (error, response) {
-                if (error) {
-                    console.log('Error response received');
-                }
-                console.log(response.statusCode);
-                console.log(response.body);
-                console.log(response.headers);
-            });
 
             // mailjet
 
