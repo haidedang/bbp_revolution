@@ -1,11 +1,11 @@
-/*body{*/
-    /*background: #282828 !important;*/
-/*}*/
-
+/*overwriting Hai*/
+p{
+  margin-bottom: 0;
+}
+/*END OF overwriting Hai*/
 
 .two p, .text-wrapper p, .text-wrapper h4{
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
+    font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
 }
 .header{
     text-align: center;
@@ -22,7 +22,7 @@
 }
 .map{
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     background-attachment: fixed;
     overflow: hidden;
 }
@@ -33,7 +33,7 @@
 /*END OF MAP*/
 /*DAYS*/
 #days-wrapper{
-    min-height: 900px;
+    min-height: 875px;
     margin-top: 54px;
     position: relative;
     z-index: 1; /* The z-index should be higher than Google Maps */
@@ -56,20 +56,23 @@
 }
 .day{
     color: #fff;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
+    font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
+    font-weight: 400;
     font-size: 20pt;
     float: left;
 }
 .day-plan{
     display: none;
 }
-
+.day-plan .text-wrapper h4 {
+    font-weight: 600;
+    color: #45494F;
+}
 .day-plan .text-wrapper p {
     color: #45494F;
 }
-.text-wrapper{
-    height: 250px;
+.day-plan .text-wrapper{
+    height: 175px;
     width: 347px;
     border-radius: 7px;
     background: #f7f7f7;
@@ -114,9 +117,6 @@
 .uno{
     transform: translateX(20px);
 }
-.about-text1{
-    transform: translateX(-20px);
-}
 .button{
     background-color: #302746; /* Green */
     padding: 15px 32px;
@@ -128,16 +128,18 @@
 }
 .all{
     color: #fff;
-    font-family: Verdana;
     font-size: 30pt;
 }
 .click-here{
     color: #888889;
-    font-size: 18pt;
 }
 .about-text{
     margin-top: 20px;
     overflow:hidden;
+}
+.about-text1{
+    transform: translateX(-20px);
+    margin-top: 60px;
 }
 .button-container {
     overflow:hidden;
@@ -158,10 +160,10 @@
     position: relative;
     top: -200px;
     z-index: 1;
-    -webkit-transition: top 1s;
-    -moz-transition: top 1s;
-    -o-transition: top 1s;
-    transition: top 1s;
+    -webkit-transition: top 3s;
+    -moz-transition: top 3s;
+    -o-transition: top 3s;
+    transition: top 3s;
 }
 /*END OF ABOUT*/
 /*OWL CAROUSEL*/
@@ -197,6 +199,7 @@ right: 0;
     margin-top: 100px;
 }
 .button2{
+    margin-top: 40px;
     background: #a34b4b;
 }
 .book-now .two{
@@ -209,6 +212,9 @@ right: 0;
 
 }
 /*FORM*/
+textarea{
+  color: #212428 !important;
+}
 form{
     font-size: 20px;
     font-weight: 200;
@@ -253,10 +259,11 @@ label span{
 .send-button{
     margin-top: 25px;
     width: 98%;
-    background: rgba(255, 255, 255, 0.1);
-    color: #000;
+    background-color: transparent;
+    border: 1px solid #f0f0f0;
+    border-color: #f0f0f0;
+    color: #f0f0f0;
 }
-
 #topNav{
     background-color:#282828;
 }

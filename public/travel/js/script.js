@@ -31,7 +31,7 @@ $(document).ready(function(){
             $(".whats-included .two").css({"top": 0});
             $(".whats-included").css({"height": 350});
             $('html,body').animate({
-                scrollTop: $(".line1").offset().top-100},
+                scrollTop: $(".line1").offset().top-50},
           'slow');
         }
         else
@@ -50,7 +50,7 @@ $(".button2").on('click', function(){
         clicked2=false;
         $(".book-now .two").css({"top": 0});
         $(".book-now").css({"height": 1800});
-        $("body").animate({"scrollTop": window.scrollY +400}, 1000);
+        $("body").animate({"scrollTop": window.scrollY +350}, 3000);
     }
     else
     {
@@ -60,8 +60,6 @@ $(".button2").on('click', function(){
     }
 });
 
-//initialize position for GOOGLEMAPS
-var position = [27.1959739, 78.02423269999997];
 //days loop
 var daysWrapper = document.getElementById('days-wrapper');
 
@@ -73,7 +71,7 @@ for (var i = 0; i < (daysWrapper.children.length); i++) {
 $("li:nth-child(1)").on('click', function(){
     if(unclickedArr[1])
     {
-        $(".map").css({"height": "125vh"});
+        $(".map").css({"height": "110vh"});
         $("li:nth-child(2n)").css({"display": "none"});
         for (var i = 0; i < (daysWrapper.children.length); i++) {
             unclickedArr[i] = true;
@@ -98,7 +96,7 @@ $("li:nth-child(3)").on('click', function(){
 
     if(unclickedArr[3])
     {
-        $(".map").css({"height": "125vh"});
+        $(".map").css({"height": "110vh"});
         $("li:nth-child(2n)").css({"display": "none"});
         for (var i = 0; i < (daysWrapper.children.length); i++) {
             unclickedArr[i] = true;
@@ -120,7 +118,7 @@ $("li:nth-child(5)").on('click', function(){
 
     if(unclickedArr[5])
     {
-        $(".map").css({"height": "125vh"});
+        $(".map").css({"height": "110vh"});
         $("li:nth-child(2n)").css({"display": "none"});
         for (var i = 0; i < (daysWrapper.children.length); i++) {
             unclickedArr[i] = true;
@@ -142,7 +140,7 @@ $("li:nth-child(7)").on('click', function(){
 
     if(unclickedArr[7])
     {
-        $(".map").css({"height": "125vh"});
+        $(".map").css({"height": "110vh"});
         $("li:nth-child(2n)").css({"display": "none"});
         for (var i = 0; i < (daysWrapper.children.length); i++) {
             unclickedArr[i] = true;
@@ -164,7 +162,7 @@ $("li:nth-child(9)").on('click', function(){
 
     if(unclickedArr[9])
     {
-        $(".map").css({"height": "125vh"});
+        $(".map").css({"height": "110vh"});
         $("li:nth-child(2n)").css({"display": "none"});
         for (var i = 0; i < (daysWrapper.children.length); i++) {
             unclickedArr[i] = true;
@@ -186,7 +184,7 @@ $("li:nth-child(11)").on('click', function(){
 
     if(unclickedArr[11])
     {
-        $(".map").css({"height": "125vh"});
+        $(".map").css({"height": "110vh"});
         $("li:nth-child(2n)").css({"display": "none"});
         for (var i = 0; i < (daysWrapper.children.length); i++) {
             unclickedArr[i] = true;
@@ -208,7 +206,7 @@ $("li:nth-child(13)").on('click', function(){
 
     if(unclickedArr[13])
     {
-        $(".map").css({"height": "125vh"});
+        $(".map").css({"height": "110vh"});
         $("li:nth-child(2n)").css({"display": "none"});
         for (var i = 0; i < (daysWrapper.children.length); i++) {
             unclickedArr[i] = true;
@@ -216,7 +214,7 @@ $("li:nth-child(13)").on('click', function(){
         unclickedArr[13]=false;
         $("li:nth-child(14)").css({"display": "inline"});
         $('html,body').animate({
-            scrollTop: $(".map").offset().top},
+            scrollTop: $(".map").offset().top+100},
       'slow');
     }
     else
@@ -230,7 +228,7 @@ $("li:nth-child(15)").on('click', function(){
 
     if(unclickedArr[15])
     {
-        $(".map").css({"height": "125vh"});
+        $(".map").css({"height": "110vh"});
         $("li:nth-child(2n)").css({"display": "none"});
         for (var i = 0; i < (daysWrapper.children.length); i++) {
             unclickedArr[i] = true;
@@ -238,7 +236,7 @@ $("li:nth-child(15)").on('click', function(){
         unclickedArr[15]=false;
         $("li:nth-child(16)").css({"display": "inline"});
         $('html,body').animate({
-            scrollTop: $(".map").offset().top},
+              scrollTop: $(".map").offset().top+100},
       'slow');
     }
     else
@@ -252,7 +250,7 @@ $("li:nth-child(17)").on('click', function(){
 
     if(unclickedArr[17])
     {
-        $(".map").css({"height": "125vh"});
+        $(".map").css({"height": "110vh"});
         $("li:nth-child(2n)").css({"display": "none"});
         for (var i = 0; i < (daysWrapper.children.length); i++) {
             unclickedArr[i] = true;
@@ -260,7 +258,7 @@ $("li:nth-child(17)").on('click', function(){
         unclickedArr[17]=false;
         $("li:nth-child(18)").css({"display": "inline"});
         $('html,body').animate({
-            scrollTop: $(".map").offset().top},
+            scrollTop: $(".map").offset().top+100},
       'slow');
     }
     else
@@ -274,7 +272,7 @@ $("li:nth-child(19)").on('click', function(){
 
     if(unclickedArr[19])
     {
-        $(".map").css({"height": "125vh"});
+        $(".map").css({"height": "110vh"});
         $("li:nth-child(2n)").css({"display": "none"});
         for (var i = 0; i < (daysWrapper.children.length); i++) {
             unclickedArr[i] = true;
@@ -282,7 +280,7 @@ $("li:nth-child(19)").on('click', function(){
         unclickedArr[19]=false;
         $("li:nth-child(20)").css({"display": "inline"});
         $('html,body').animate({
-            scrollTop: $(".map").offset().top},
+              scrollTop: $(".map").offset().top+100},
       'slow');
     }
     else
@@ -296,7 +294,7 @@ $("li:nth-child(21)").on('click', function(){
 
     if(unclickedArr[21])
     {
-        $(".map").css({"height": "125vh"});
+        $(".map").css({"height": "110vh"});
         $("li:nth-child(2n)").css({"display": "none"});
         for (var i = 0; i < (daysWrapper.children.length); i++) {
             unclickedArr[i] = true;
@@ -304,7 +302,7 @@ $("li:nth-child(21)").on('click', function(){
         unclickedArr[21]=false;
         $("li:nth-child(22)").css({"display": "inline"});
         $('html,body').animate({
-            scrollTop: $(".map").offset().top},
+            scrollTop: $(".map").offset().top+100},
       'slow');
     }
     else
@@ -315,6 +313,8 @@ $("li:nth-child(21)").on('click', function(){
 });
 
 //googlemaps
+//initialize position for GOOGLEMAPS
+var position = [27.1959739, 78.02423269999997];
 
 function showGoogleMaps() {
 
