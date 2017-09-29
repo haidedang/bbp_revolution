@@ -123,7 +123,7 @@ router.post('/register/', (req, res) => {
 });
 
 router.get('/verify_email', function(req,res) {
-    console.log('verify_email token: ',req.query.token);
+    console.log('verify_email token: ', req.query.token);
 
     User.findOne({ secretToken: req.query.token }, function(err, user) {
         if (err) { return console.error(err); }

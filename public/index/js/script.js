@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     //owl carousel
     $('.owl-carousel').owlCarousel({
         loop:true,

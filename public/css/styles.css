@@ -96,7 +96,7 @@ p {
 }
 
 .cursive {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Architects Daughter', cursive;
     text-transform: none;
 }
 
@@ -256,7 +256,7 @@ header {
     color: #fff;
     width: 100%;
     background-color: #c9c9c9;
-    background-image: url('https://splashbase.s3.amazonaws.com/lifeofpix/regular/Life-of-Pix-free-stock-photos-Slate-Stone-Xeromatic-1440x953.jpg');
+    background-image: url('http://demo.themeton.com/travel/wp-content/uploads/sites/62/2016/04/photo-1443890923422-7819ed4101c0.jpg');
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -282,6 +282,14 @@ header .header-content .inner p {
     font-size: 16px;
     font-weight: 300;
     color: rgba(255,255,255,0.7);
+}
+
+.scroll{
+
+}
+
+.inner{
+    padding-bottom:50px;
 }
 
 #video-background {
