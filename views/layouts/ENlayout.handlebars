@@ -1,3 +1,4 @@
+<!--Layout für englishe Version-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +25,9 @@
         ga('create', 'UA-89108074-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -69,10 +73,10 @@
                         <a class="page-scroll" href="/learn">learn</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/#four">live</a>
+                        <a class="page-scroll" href="#four">live</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/#last">Contact</a>
+                        <a class="page-scroll" href="#last">Contact</a>
                     </li>
 
                 {{/if}}
@@ -85,25 +89,60 @@
                     <a class="page-scroll" title ="en" href="/ENindex"><img style="width: 2em;" src="/images/England.png"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" data-toggle="modal" title="about" href="/#aboutModal">Über uns</a>
+                    <a class="page-scroll" data-toggle="modal" title="about" href="#aboutModal">About Us</a>
                 </li>
 
-                {{#if user}}
-                    <li>
-                        <a title="logout" href="/users/logout">Logout</a>
-                    </li>
-                {{else}}
-                    <li>
-                        <a title="login" href="/users/login">Login</a>
-                    </li>
-                    <li>
-                        <a title="register" href="/users/register">Register</a>
-                    </li>
-                {{/if}}
+                <!--{{#if user}}-->
+                    <!--<li>-->
+                        <!--<a title="logout" href="/users/logout">Logout</a>-->
+                    <!--</li>-->
+                <!--{{else}}-->
+                    <!--<li>-->
+                        <!--<a title="login" href="/users/login">Login</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a title="register" href="/users/register">Register</a>-->
+                    <!--</li>-->
+                <!--{{/if}}-->
             </ul>
         </div>
     </div>
 </nav>
+
+<div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="text-center">bbp</h2>
+                <h5 class="text-center">
+                    betterbackpacking
+                </h5>
+                <p class="text-justify">
+                    The internet platform bbp is a young, innovative company about backpacking. We provide a social platform that combines backpackers and backpackers with local adventure guides around the world, creating a vibrant community.
+                    On our platform you can get everything you need for backpacking. Whether it is the mediation of one of our guides and thus making possible wonderful and breathtaking tours - or whether it’s the pick up of cultural and country-specific information and offers around his adventure - it is all here. In any case, you can exchange with all the members at any time and make new acquaintances, create security and be in contact with many other great like-minded people.
+                    In short, our company is about the mediation of travel, the provision of information and the possibility of communication -
+                    Travel, learn and live. These are our values. And together with you we create something great.
+                    Be a citizen of the world!
+
+                </p>
+                <img style="width:100%;" src="/images/profilbild.jpg">
+                <!--<p class="text-center"><a href="http://www.bootstrapzero.com">Download at BootstrapZero</a></p>-->
+                <br/>
+                <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true"> OK </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="whatsapp" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="text-center">phone: +49 1633512444</h2>
+            </div>
+        </div>
+    </div>
+</div>
 
 {{{body}}}
 

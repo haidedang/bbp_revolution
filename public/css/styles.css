@@ -54,7 +54,8 @@ hr.light {
 }
 
 a {
-    color: #9c27b0;
+    /*color: #9c27b0;*/
+    color:whitesmoke;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -62,9 +63,29 @@ a {
 
 a:hover,
 a:focus {
-    color: #9c27c1;
+    color: rgba(199, 99, 100, 0.74);
     outline: 0;
 }
+
+.globe:hover,
+.globe:focus {
+    color: #337ab7;
+    outline: 0;
+}
+
+.light:hover,
+.light:focus {
+    color: rgba(254, 255, 8, 0.86);
+    outline: 0;
+}
+
+.comment:hover,
+.comment:focus {
+    color: rgba(199, 99, 100, 0.74);
+    outline: 0;
+}
+
+
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
@@ -96,7 +117,7 @@ p {
 }
 
 .cursive {
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Lato', sans-serif;
     text-transform: none;
 }
 
@@ -109,7 +130,8 @@ p {
 }
 
 .text-primary {
-    color: #9c27b0;
+    margin-bottom:3em;
+    color: lightgrey;
 }
 
 .modal-content {
@@ -249,6 +271,36 @@ footer {
     }
 }
 
+video {
+    position: relative;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    background-color: #c9c9c9;
+    background-image: url('http://www.bhmpics.com/walls/mountains_himalaya-wide.jpg');
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.vidinfo {
+    padding-top:15px;
+}
+
+/*.inner{*/
+    /*margin-bottom:10em;*/
+/*}*/
+
+.headerIcons{
+
+    padding-top:10px;
+    background-color: rgba(0,0,0,0.42);
+}
+
+
 header {
     position: relative;
     min-height: auto;
@@ -273,8 +325,9 @@ header .header-content {
 }
 
 header .header-content .inner h1 {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top:2em;
+    /*margin-top: 0;*/
+    /*margin-bottom: 0;*/
 }
 
 header .header-content .inner p {
@@ -292,8 +345,8 @@ header .header-content .inner p {
     padding-bottom:50px;
 }
 
-#video-background {
-  position: absolute;
+#vid-background {
+    position: absolute;
   right: 0;
   bottom: 0;
   min-width: 100%;
@@ -333,6 +386,7 @@ footer {
         margin-right: auto;
         margin-left: auto;
         max-width: 1000px;
+
     }
 
     header .header-content .inner h1 {
@@ -803,4 +857,8 @@ input::placeholder {
 /*ADRIANNA UPDATE*/
 #mce-EMAIL{
   color: #212428 !important;
+}
+
+.item{
+    margin-bottom:2em;
 }

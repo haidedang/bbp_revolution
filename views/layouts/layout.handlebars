@@ -1,3 +1,4 @@
+<!--layout für deutsche Version-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,10 +13,11 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="misc/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
     <!--Google Analytics -->
     <script>
@@ -87,27 +89,51 @@
                     <a class="page-scroll" title ="en" href="/ENindex"><img style="width: 2em;" src="/images/England.png"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" data-toggle="modal" title="about" href="/#aboutModal">Über uns</a>
+                    <a class="page-scroll" data-toggle="modal" title="about" href="#aboutModal">Über uns</a>
                 </li>
 
-                {{#if user}}
-                    <li>
-                        <a title="logout" href="/users/logout">Logout</a>
-                    </li>
-                {{else}}
-                    <li>
-                        <a title="login" href="/users/login">Login</a>
-                    </li>
-                    <li>
-                        <a title="register" href="/users/register">Register</a>
-                    </li>
-                {{/if}}
+                <!--{{#if user}}-->
+                    <!--<li>-->
+                        <!--<a title="logout" href="/users/logout">Logout</a>-->
+                    <!--</li>-->
+                <!--{{else}}-->
+                    <!--<li>-->
+                        <!--<a title="login" href="/users/login">Login</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a title="register" href="/users/register">Register</a>-->
+                    <!--</li>-->
+                <!--{{/if}}-->
             </ul>
         </div>
     </div>
 </nav>
 
+<div id="aboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="text-center">bbp</h2>
+                <h5 class="text-center">
+                    betterbackpacking
+                </h5>
+                <p >
+                    Die Internetplattform bbp ist ein junges, innovatives Unternehmen des Backpackens. Wir stellen eine soziale Plattform bereit, bei der es darum geht, Backpacker untereinander und Backpacker mit lokalen Abenteurguides weltweit miteinander zu verbinden, sodass eine lebendige Community entsteht.
+                    Auf unserer Plattform kann man sich alles nötige zum Thema Backpacking abholen. Ob es die Vermittlung eines unserer Guides und damit von wundervollen und atemberaubende Touren ist - oder ob man sich kultur- und länderspezifische Informationen und Angebote rund um sein Abenteuer abholt. Auf jeden Fall kann man sich mit allen Mitgliedern jederzeit austauschen und macht so neue Bekanntschaften, schafft Sicherheit und ist in Gesellschaft von vielen anderen tollen Gleichgesinnten.
+                    Wir nennen diese Dreiteilung- also die Vermittlung von Reisen, die Bereitstellung von Informationen und die Möglichkeit zur Kommunikation -
+                    travel , learn und live. Das sind unsere Werte. Und gemeinsam mit dir schaffen wir etwas Großes.
+                </p>
+                <img style="width:100%;" src="/images/profilbild.jpg">
+                <!--<p class="text-center"><a href="http://www.bootstrapzero.com">Download at BootstrapZero</a></p>-->
+                <br/>
+                <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true"> OK </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 {{{body}}}
+
 
 
 <!--scripts loaded here from cdn for performance -->

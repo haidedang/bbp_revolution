@@ -1,34 +1,19 @@
 0 info it worked if it ends with ok
-<<<<<<< HEAD
 1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
 2 info using npm@3.10.10
 3 info using node@v6.10.0
-=======
-1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
-1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'start' ]
-2 info using npm@3.10.10
-3 info using node@v6.11.3
->>>>>>> baae37d0e53bd08523a790dd7f14a8d75aa8dc16
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info lifecycle bbp@0.0.0~prestart: bbp@0.0.0
 6 silly lifecycle bbp@0.0.0~prestart: no script for prestart, continuing
 7 info lifecycle bbp@0.0.0~start: bbp@0.0.0
 8 verbose lifecycle bbp@0.0.0~start: unsafe-perm in lifecycle true
-<<<<<<< HEAD
 9 verbose lifecycle bbp@0.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/haidang/Documents/Webdevelopment/Projects/bbp_revolution/node_modules/.bin:/Users/haidang/.composer/vendor/bin:/Users/haidang/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 10 verbose lifecycle bbp@0.0.0~start: CWD: /Users/haidang/Documents/Webdevelopment/Projects/bbp_revolution
 11 silly lifecycle bbp@0.0.0~start: Args: [ '-c', 'node app.js' ]
-=======
-9 verbose lifecycle bbp@0.0.0~start: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Users\Adrianna\Desktop\bbp - revolution\bbp_revolution\node_modules\.bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\RailsInstaller\Git\cmd;C:\RailsInstaller\Ruby2.1.0\bin;C:\Users\Adrianna\AppData\Local\atom\bin;C:\Users\Adrianna\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Heroku\bin;C:\Users\Adrianna\AppData\Roaming\npm
-10 verbose lifecycle bbp@0.0.0~start: CWD: C:\Users\Adrianna\Desktop\bbp - revolution\bbp_revolution
-11 silly lifecycle bbp@0.0.0~start: Args: [ '/d /s /c', 'node app.js' ]
->>>>>>> baae37d0e53bd08523a790dd7f14a8d75aa8dc16
 12 silly lifecycle bbp@0.0.0~start: Returned: code: 1  signal: null
 13 info lifecycle bbp@0.0.0~start: Failed to exec start script
 14 verbose stack Error: bbp@0.0.0 start: `node app.js`
 14 verbose stack Exit status 1
-<<<<<<< HEAD
 14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
 14 verbose stack     at emitTwo (events.js:106:13)
 14 verbose stack     at EventEmitter.emit (events.js:191:7)
@@ -42,21 +27,6 @@
 17 error Darwin 16.4.0
 18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
 19 error node v6.10.0
-=======
-14 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:255:16)
-14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at EventEmitter.emit (events.js:191:7)
-14 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:40:14)
-14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at ChildProcess.emit (events.js:191:7)
-14 verbose stack     at maybeClose (internal/child_process.js:920:16)
-14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:230:5)
-15 verbose pkgid bbp@0.0.0
-16 verbose cwd C:\Users\Adrianna\Desktop\bbp - revolution\bbp_revolution
-17 error Windows_NT 10.0.15063
-18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start"
-19 error node v6.11.3
->>>>>>> baae37d0e53bd08523a790dd7f14a8d75aa8dc16
 20 error npm  v3.10.10
 21 error code ELIFECYCLE
 22 error bbp@0.0.0 start: `node app.js`

@@ -34,24 +34,61 @@ router.post('/travel',function(req,res,next){
     const age = req.body.age;
     const duration = req.body.duration;
     const experience = req.body.experience;
+    const fitness = req.body.fitness;
+    const activities = req.body.activities;
+    const accommodation = req.body.accommodation;
+    const company = req.body.company;
+    const message = req.body.message;
 
 
-    function testEmail (name, surname,age) {
+    function testEmail (name, surname, email, age, duration, experience, fitness, activities, accommodation, company, message){
         Email = {};
-        Email.FromName = 'bbp';
+        Email.FromName = name;
         Email.FromEmail = 'betterbackpacking@gmail.com';
-        Email.Subject = 'EmailVerification';
-        Email.Recipients = [{Email: email}];
-        Email['Html-Part'] = name + surname + age;
+        Email.Subject = 'Kundenanfrage';
+        Email.Recipients = [{Email: 'betterbackpacking@gmail.com'}];
+        Email['Html-Part'] = 'name: ' + name + '<hr>' + 'surname: ' + surname + '<hr>' + 'email: ' + email + '<hr>' + 'age: ' + age + '<hr>' +
+                'duration: ' + duration + '<hr>' + 'experience: ' + experience + '<hr>'+ 'fitness: ' + fitness + '<hr>' +
+                    'activities: ' + activities + '<hr>' +'accommodation: ' + accommodation + '<hr>' +'company: ' + company + '<hr>' +'message: ' + message;
 
 
         Mailjet.post('send')
             .request(Email);
     }
 
-    testEmail(name, surname, age);
-    res.render('travel', {layout:'Layout.handlebars'});
+    testEmail (name, surname, email, age, duration, experience, fitness, activities, accommodation, company, message);
+    res.render('contact-form-thank-you');
 
-})
+});
+
+router.post('/contact' , function(req,res,next){
+    const name = req.body.name;
+    const email = req.body.email;
+    const phone = req.body.phone;
+    const message = req.body.message;
+
+
+
+    function testEmail (name, email, phone, message) {
+        Email = {};
+        Email.FromName = name;
+        Email.FromEmail = 'betterbackpacking@gmail.com';
+        Email.Subject = 'Kundenanfrage';
+        Email.Recipients = [{Email: 'betterbackpacking@gmail.com'}];
+        Email['Html-Part'] = 'name: ' + name + '<hr>' + 'email: ' + email + '<hr>'
+        + 'phone: ' + phone + '<hr>' + 'message: ' + message;
+
+
+
+
+        Mailjet.post('send')
+            .request(Email);
+    }
+
+    testEmail(name, email, phone, message);
+    res.render('contact-form-thank-you');
+
+});
+
 
 module.exports = router;

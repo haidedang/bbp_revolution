@@ -19,11 +19,22 @@
                 <i class="fa fa-exclamation fa-5x" aria-hidden="true"></i>
             </div>
             <div class="text-wrapper col-md-10">
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class="text">
+                    Willkommen auf dem dem bbp-travelPart !
+                    <hr>
+                    Hier präsentieren lokale Guides ihre Tourenangebote. Mit diesen Abenteurguides haben wir für euch Kooperationsverträge geschlossen - wir vermitteln die von ihnen angebotenen Touren auf dem travelPart. Für die Durchführung und die Organisation ist somit immer der jeweilige, handverlesene Guide verantwortlich.
+                    <hr>
+                    Neben den nordindischen Guides erwarten dich außerdem authentische Guides in Nepal, aufregende Abenteuer-Tagestouren auf Mallorca und Touren über die iberische Halbinsel mit unserem Caravan-Tourguide.
+                    Und wenn es mal eher ruhig und entspannt zugehen soll, vermitteln wir dir gerne ein Ressort auf einer idyllischen vietnamesischen Insel.
+                    <hr>
+                    betterbackpacking vermittelt ausschließlich Guides, die bestimmten Qualitätsansprüchen gerecht werden, wirklich lokal sind und im persönlichen Kontakt zu uns stehen!
+                    Jede Tour kann mit den Guides individuell bearbeitet werden und wird vollkommen nach euren Wünschen konzipiert: weniger Treks und dafür mehr Kultur, zwei Wochen durch trekken und die höchsten Höhen erklimmen, es liegt bei euch!
+                    Sprecht uns an, kommt mit uns in Kontakt und sichert euch euren Guide - stolz vermittelt von betterbackpacking!
+                </p>
             </div>
         </div>
     </div>
-    <div class="header">
+    <div class="header col-md-12">
         <h1 class="big-string title">Alive tour</h1>
     </div>
     <div class="line col-md-8 col-md-offset-2"></div>
@@ -145,6 +156,18 @@
         </div>
     </li>
 </div>
+
+<div id="video" class="text-center">
+    <video controls loop="yes" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.1s" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">
+        <a href="https://vimeo.com/192417650"></a>
+        <source src="/travel/images/alive.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+    </video>
+    <div class="vidinfo">
+        <a href="#videoinfo" data-toggle="modal" class="btn btn-primary btn-xl page-scroll">Video Info</a>
+    </div>
+
+</div>
+
 <div class="container">
 
     <div class="line line1 col-md-8 col-md-offset-2"></div>
@@ -232,10 +255,10 @@
             <div class="one"></div>
             <div class="two">
                 <div class="about-text">
-                    <form method="POST" action="http://localhost:3000/travel">
+                    <form method="POST" action="/travel">
                         <div class="message-group short">
                           <label><span>Your name:</span>
-                            <textarea name="name" placeholder="Your name.."></textarea></label>
+                            <textarea name="name" placeholder="Your name.." required></textarea></label>
                           </div>
                         <div class="message-group short">
                             <label><span>Your surname:</span>
@@ -243,7 +266,7 @@
                         </div>
                         <div class="message-group short">
                             <label><span>Your email:</span>
-                                <textarea name="email" placeholder="Your email.."></textarea></label>
+                                <textarea name="email" placeholder="Your email.." required></textarea></label>
                         </div>
                         <div class="message-group">
                             <label><span>Your age:</span>
@@ -283,6 +306,32 @@
             </div>
         </div>
     </div>
+
+    <div id="videoinfo" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="text-center"><a target="_blank" href="https://vimeo.com/192417650">Alive</a></h2>
+                    <h5 class="text-center">
+                        by Alessandro Rovere
+                    </h5>
+                    <div class="text-center">
+                        Dieses wunderbare Video ist gemeinsam mit unserem Freund und Videograph Alessandro Rovere entstanden. Als erster vermittelter Customer hat er mit uns zusammen diese Tour unternommen und dabei unvergessliche Erfahrungen gesammelt.
+                        Was auf diesen Bildern zu sehen ist, spiegelt eine vom indischen Guide JD angebotene Tour wieder - die ‘Alive’-Tour.
+                        Falls du dich durch diese Tour inspiriert fühlst, melde dich bei uns, wir stellen gerne den Kontakt zum indischen Guidenetzwerk her!
+                    </div>
+                    <div class="text-center">  <a target="_blank" href="http://alessandro-rovere.de/">website</a></div>
+                    <div class="text-center">   <a target="_blank" href="http://facebook.com/alessandroroverevisual">facebook</a></div>
+                    <div class="text-center"><a target="_blank" href="http://instagram.com/generalhappy/">instagram</a></div>
+
+                    <!--<p class="text-center"><a href="http://www.bootstrapzero.com">Download at BootstrapZero</a></p>-->
+                    <br/>
+                    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true"> OK </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 </div>

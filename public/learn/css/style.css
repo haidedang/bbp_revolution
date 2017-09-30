@@ -41,6 +41,10 @@ stylize any heading tags withing white-panel below
     transition: all 0.3s ease-in-out;
 }
 
-p {
+#blog-landing p{
     color: #2e2b36;
 }
+
+/*p {*/
+    /*color: #2e2b36;*/
+/*}*/
