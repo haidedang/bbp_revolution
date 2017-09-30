@@ -20,7 +20,7 @@ router.get('/ENindex', function(req, res, next) {
 });
 
 router.get('/datenschutz', function(req, res, next) {
-    res.render('datenschutz', {layout:'Layout.handlebars'});
+    res.render('datenschutz');
 });
 
 router.get('/privatePolicy', function(req, res, next) {
