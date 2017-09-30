@@ -1,0 +1,35 @@
+{
+  "name": "bbp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
+    "email-verification": "^0.4.6",
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "^2.2.30",
+    "mongoose": "*",
+    "nodemailer": "^4.0.1",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*",
+    "randomstring": "*",
+    "sendgrid": "^5.2.2",
+    "nodemailer-sendgrid-transport": "*",
+    "socket.io": "^2.0.3",
+    "node-mailjet": "^3.2.1"
+  },
+  "engines": {
+    "node": "6.10.0",
+    "npm": "3.10.10"
+  }
+}
