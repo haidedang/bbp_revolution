@@ -16,7 +16,7 @@ router.get('/learn', function( req, res, next){
 })
 
 router.get('/ENindex', function(req, res, next) {
-    res.render('ENindex', {layout:'ENLayout.handlebars'});
+    res.render('ENindex');
 });
 
 router.get('/datenschutz', function(req, res, next) {
@@ -24,7 +24,7 @@ router.get('/datenschutz', function(req, res, next) {
 });
 
 router.get('/privatePolicy', function(req, res, next) {
-    res.render('privatePolicy', {layout:'ENLayout.handlebars'});
+    res.render('privatePolicy');
 });
 
 router.post('/travel',function(req,res,next){
