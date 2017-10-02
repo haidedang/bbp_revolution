@@ -4,7 +4,7 @@ var Mailjet = require('node-mailjet').connect('b3986e30a129eeb3c0e06fc7f455ef6c'
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  res.render('index', {layout:'ENlayout'});
 });
 
 router.get('/travel', function(req, res, next) {
