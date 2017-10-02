@@ -128,7 +128,7 @@ p{
     border-top: 2px solid #b7b2c1;
 }
 .big-string{
-    color: #6a53a0;
+    color: rgba(255, 122, 0, 0.81);
     font-style: italic;
     font-family: Arial;
     font-size: 50pt;
@@ -137,7 +137,8 @@ p{
     transform: translateX(20px);
 }
 .button{
-    background-color: #302746; /* Green */
+    background: #a34b4b;
+    /* Green */
     padding: 15px 32px;
     border-radius: 12px;
     text-align: center;
@@ -327,3 +328,15 @@ label span{
     background-color:#282828;
 }
 /*END OF FORM*/
+@media(min-width:768px){
+
+    #video{
+        margin-top:75em;
+    }
+}
+
+@media(max-width: 500px){
+    #video{
+        margin-top:1em;
+    }
+}

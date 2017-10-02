@@ -4,7 +4,7 @@ var Mailjet = require('node-mailjet').connect('b3986e30a129eeb3c0e06fc7f455ef6c'
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', {layout:'ENlayout'});
+  res.render('index');
 });
 
 router.get('/travel', function(req, res, next) {
@@ -19,6 +19,10 @@ router.get('/ENindex', function(req, res, next) {
     res.render('ENindex');
 });
 
+router.get('/ENlearn', function(req, res, next) {
+    res.render('ENlearn');
+});
+
 router.get('/datenschutz', function(req, res, next) {
     res.render('datenschutz');
 });
@@ -26,6 +30,8 @@ router.get('/datenschutz', function(req, res, next) {
 router.get('/privatePolicy', function(req, res, next) {
     res.render('privatePolicy');
 });
+
+
 
 router.post('/travel',function(req,res,next){
     const name = req.body.name;
