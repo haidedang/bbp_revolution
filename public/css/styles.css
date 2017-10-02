@@ -54,8 +54,8 @@ hr.light {
 }
 
 a {
-    /*color: #9c27b0;*/
-    color:whitesmoke;
+    color: #f6963c;
+        /*color:whitesmoke;*/
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;

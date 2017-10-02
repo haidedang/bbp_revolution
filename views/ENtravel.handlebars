@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>betterbackpacking</title>
+    <meta name="description" content="Die Internetplattform bbp ist ein junges, innovatives Unternehmen des Rucksackreisens und stellt eine dahingehende soziale Plattform bereit.
+                    Der Produktfokus liegt auf der Vermittlung von Touristenführern mit jeweiligen Touren, der Bereitstellung von Informationen und Dienstleistungen rund um  das Rucksackreisen und der Kommunikation zwischen den Kunden und den Touristenführern, als auch zwischen Kunde und Kunde.
+                    Die vom Unternehmen geteilten Werte stellen also gleichzeitig durch die Segmentierung dieser drei Bereiche die Bausteine der Seite dar. Hierbei handelt es sich um travel, learn und live." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="misc/fontAwesome/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-89108074-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/travel/css/styles.css">
+    <link rel="stylesheet" href="/travel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/travel/css/owl.theme.default.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <script src="https://use.fontawesome.com/7f1e234e47.js"></script>
+
+
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.9";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" id="bbp" href="/"><img style="width:2em" alt="logo" src="/images/logo_white.svg"> </a>
+        </div>
+        <div class="navbar-collapse collapse" id="bs-navbar">
+            <ul class="nav navbar-nav">
+
+                </li>
+                {{#if user}}
+                    <li>
+                        <a class="page-scroll" href="/travel">travel</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/learn">learn</a>
+                    </li>
+                    <li>
+                    <li>
+                        <a title="chat" href="/users/chat">bbp Lounge</a>
+                    </li>
+                {{else}}
+                    <li>
+                        <a class="page-scroll" href="/travel">travel</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/ENlearn">learn</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/ENindex#four">live</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/ENindex#last">Contact</a>
+                    </li>
+
+                {{/if}}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="page-scroll"  title="ger" href="/"><img style="width: 2em;" src="/images/germany.png"> </a>
+                </li>
+                <li>
+                    <a class="page-scroll" title ="en" href="/ENindex"><img style="width: 2em;" src="/images/England.png"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" data-toggle="modal" title="about" href="#ENaboutModal">About Us</a>
+                </li>
+
+                    <!--{{#if user}}-->
+                <!--<li>-->
+                <!--<a title="logout" href="/users/logout">Logout</a>-->
+                <!--</li>-->
+                    <!--{{else}}-->
+                <!--<li>-->
+                <!--<a title="login" href="/users/login">Login</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<a title="register" href="/users/register">Register</a>-->
+                <!--</li>-->
+                    <!--{{/if}}-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="ENaboutModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h2 class="text-center">bbp</h2>
+                <h5 class="text-center">
+                    betterbackpacking
+                </h5>
+                <p class="text-justify">
+                    The internet platform bbp is a young, innovative company about backpacking. We provide a social platform that combines backpackers and backpackers with local adventure guides around the world, creating a vibrant community.
+                    On our platform you can get everything you need for backpacking. Whether it is the mediation of one of our guides and thus making possible wonderful and breathtaking tours - or whether it’s the pick up of cultural and country-specific information and offers around his adventure - it is all here. In any case, you can exchange with all the members at any time and make new acquaintances, create security and be in contact with many other great like-minded people.
+                    In short, our company is about the mediation of travel, the provision of information and the possibility of communication -
+                    Travel, learn and live. These are our values. And together with you we create something great.
+                    Be a citizen of the world!
+
+                </p>
+                <img style="width:100%;" src="/images/profilbild.jpg">
+                <!--<p class="text-center"><a href="http://www.bootstrapzero.com">Download at BootstrapZero</a></p>-->
+                <br/>
+                <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true"> OK </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+
+<!--<body>-->
+
+
+<div class="container">
+    <div class="site-description">
+        <div class="pink-box col-md-8 col-md-offset-2">
+            <div class="icon-wrapper">
+                <i class="fa fa-exclamation fa-5x" aria-hidden="true"></i>
+            </div>
+            <div class="text-wrapper col-md-10">
+                <p class="text">
+                    Welcome to the bbp-travelPart!
+                <hr>
+                This is where our local guides present their tour proposals. Especially for you we concluded cooperation agreements with the adventure-loving guides to mediate their exclusive tour offers in our travelPart. The respective, hand-picked guide is always responsible for implementation and organization of their offered tour.
+                <hr>
+                Besides north Indian guides, you can expect authentic Napalese guides, exciting adventure day trips in Mallorca and tours though the Iberian Peninsula organized by our caravan tour guide. And if you want your holidays to be more calm and relaxed, we would love to mediate a resort on an idyllic Vietnamese island, too.
+                <hr>
+                betterbackpacking only mediates local guides that meet the bbp quality requirements and always stay in personal contact with us! Each tour can be individually discussed and planed with the guides to offer you the adventure of our dreams: less trekking & more culture or two weeks trekking & climbing the highest mountains – it´s up to you!
+                Contact us and immediately save your own local guide - proudly mediated by betterbackpacking!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="header col-md-12">
+        <h1 class="big-string title">Alive tour</h1>
+    </div>
+    <div class="line col-md-8 col-md-offset-2"></div>
+</div>
+<div class="map-wrapper">
+    <div class="map" id="map">
+    </div>
+</div>
+<div id="days-wrapper" class="col-xs-12 col-sm-4 col-md-4 col-md-offset-0">
+    <li class="day-div">
+        <div class="day">DAY 1</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Shimla</h4>
+            <p>Arrival in Shimla, the capital of Himachal Pradesh. Discover Shimla’s old town and “The Mall” by foot, visit the Jakhoo temple, highest point of Shimla</p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 2</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Sarahan</h4>
+            <p>Shimla (2100m) to Sarahan (2300m). Visit the Bhimakali Temple and a pheasantry 3-hour hike to Hatupeak (3400m)</p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 3</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Kalpa</h4>
+            <p>Sarahan to Kalpa (2800m). Enjoy the massive Kinnaur Kailash (6050m) and its 7 color changes according to the sunbeam </p>
+
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 4</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Nako</h4>
+            <p>Kalpa to Nako (3700m). Hike around Nako lake</p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 5</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Tabo</h4>
+            <p>Nako to Tabo (3000m). Visit the 1000-year old Tabo Monastery</p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 6</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Dhankar</h4>
+            <p>Tabo to Dhankar (3900m). Visit the Dhankar Monastery and hike up to the holy Dhankar Lake</p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 7</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Kaza</h4>
+            <p>Dhankar to Kaza (3800m). Visit the highest town, Comic (4600m)</p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 8</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Kaza</h4>
+            <p>Stay in Kaza. Visit Kibbar (4200m) and Kye Monastery, the biggest monastery in Spiti</p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 9</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Manali</h4>
+            <p>Chandra Taal to Manali (2000m). Drive through Rohtang Pass (4000m) and go shopping in Manali. alternative: relaxed hike with impressive waterfalls at the end</p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 10</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Aru</h4>
+            <p>Manali to Aru (2400m). Drive to and hike around Aru Valley</p>
+        </div>
+    </li>
+    <li class="day-div">
+        <div class="day">DAY 11</div>
+        <div class="show"></div>
+    </li>
+    <li class="day-plan">
+        <div class="text-wrapper">
+            <h4>Srinagar</h4>
+            <p>Aru to Srinagar. Have a relaxed day at houseboat</p>
+        </div>
+    </li>
+</div>
+
+<div class=" container ">
+    <div id="video" class="text-center">
+        <!--<video controls loop="yes" class="fillWidth fadeIn wow collapse in" data-wow-delay="0.1s" poster="https://s3-us-west-2.amazonaws.com/coverr/poster/Traffic-blurred2.jpg" id="video-background">-->
+        <!--<a href="https://vimeo.com/192417650"></a>-->
+        <!--<source src="/travel/images/alive.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.-->
+        <!--</video>-->
+
+        <iframe src="https://player.vimeo.com/video/192417650?color=ffffff" style=" height: 600px; width:100%;"  webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+        <div class="vidinfo">
+            <a href="#videoinfo" data-toggle="modal" class="btn btn-primary btn-xl page-scroll">Video Info</a>
+        </div>
+
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="line line1 col-md-8 col-md-offset-2"></div>
+    <p class="big-string uno col-md-7 col-md-offset-3">What's included?</p>
+    <div class="about about1 col-md-6 col-md-offset-3">
+        <div class="button button1">
+            <p class="all">ALL-IN-ONE</p>
+        </div>
+        <p class="click-here">click here to find out more</p>
+
+        <div class="button-container whats-included">
+            <div class="one"></div>
+            <div class="two">
+                <div class="about-text about-text1">
+                    <ul>
+                        <li>
+                            <p class="all-included">All included:</p>
+                        </li>
+                        <li>
+                            <div class="trip-detail-box">
+                                <div class="icon-container left col-md-2">
+                                    <i class="fa fa-truck fa-4x" aria-hidden="true"></i>
+                                </div>
+                                <div class="trip-text-container left align-left col-md-9">
+                                    <p>Transportation: four-wheel-drive jeep + driver (including fuel)</p>
+                                </div>
+                            </div>
+                        </li>
+                        <hr>
+                        <li>
+                            <div class="trip-detail-box">
+                                <div class="icon-container right col-md-2">
+                                    <i class="fa fa-bed fa-4x" aria-hidden="true"></i>
+                                </div>
+                                <div class="trip-text-container right align-right col-md-9">
+                                    <p>Accommodation: hotels, mountain huts, and/or camping</p>
+                                </div>
+
+                            </div>
+                        </li>
+                        <hr>
+                        <li>
+                            <div class="trip-detail-box">
+                                <div class="icon-container left col-md-2">
+                                    <i class="fa fa-cutlery fa-4x" aria-hidden="true"></i>
+                                </div>
+                                <div class="trip-text-container left align-left col-md-9">
+                                    <p>Food and drinks: breakfast, lunch, dinner + snacks</p>
+                                </div>
+                            </div>
+                        </li>
+                        <hr>
+                        <li>
+                            <div class="trip-detail-box">
+                                <div class="icon-container right col-md-2">
+                                    <i class="fa fa-male fa-4x" aria-hidden="true"></i>
+                                </div>
+                                <div class="trip-text-container right align-right col-md-9">
+                                    <p>24-hours guide</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="owl-carousel owl-theme about col-md-12">
+    <div class="item"><img src="/travel/images/pic1.png"></div>
+    <div class="item"><img src="/travel/images/pic2.png"></div>
+    <div class="item"><img src="/travel/images/pic3.png"></div>
+    <div class="item"><img src="/travel/images/pic4.png"></div>
+    <div class="item"><img src="/travel/images/pic5.png"></div>
+    <div class="item"><img src="/travel/images/pic6.png"></div>
+</div>
+<div class="container">
+    <div class="about about2 col-md-6 col-md-offset-3">
+        <p class="click-here click-here2">By clicking on this button, you’re going to be mediated to one of the local guides.
+        </p>
+        <div class="button button2">
+            <p class="all">better backpack now!</p>
+        </div>
+        <div class="button-container book-now">
+            <div class="one"></div>
+            <div class="two">
+                <div class="about-text">
+                    <form method="POST" action="/travel">
+                        <div class="message-group short">
+                            <label><span>Your name:</span>
+                                <textarea name="name" placeholder="Your name.." required></textarea></label>
+                        </div>
+                        <div class="message-group short">
+                            <label><span>Your surname:</span>
+                                <textarea name="surname" placeholder="Your surname.."></textarea></label>
+                        </div>
+                        <div class="message-group short">
+                            <label><span>Your email:</span>
+                                <textarea name="email" placeholder="Your email.." required></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Your age:</span>
+                                <textarea name="age" placeholder="How old are you physically? And how old psychologically?.."></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Your travel duration:</span>
+                                <textarea name="duration" placeholder="How many days you are planning for your adventure? And especially when?.."></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Your experience:</span>
+                                <textarea name="experience" placeholder="What are your experiences with backpacking? What about trekking?.."></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Your fitness level</span>
+                                <textarea name="fitness" placeholder="How fit are you? Do you know your body and can you estimate your body capability in extreme situations, e.g. do you suffer from mountain sickness?.."></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Activities:</span>
+                                <textarea name="activities " placeholder="How many treks should be included in the tour?.."></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Accommodation:</span>
+                                <textarea name="accommodation" placeholder="Hilton, hostel or huts?.."></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Company:</span>
+                                <textarea name="company" placeholder="Are you open for more backpackers to join the adventure?.."></textarea></label>
+                        </div>
+                        <div class="message-group">
+                            <label><span>Do you want to tell us anything else?</span>
+                                <textarea name="message" placeholder="Your message.."></textarea></label>
+                        </div>
+                        <input class="send-button" type="submit" value="Send->">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="videoinfo" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="text-center"><a target="_blank" href="https://vimeo.com/192417650">Alive</a></h2>
+                    <h5 class="text-center">
+                        by Alessandro Rovere
+                    </h5>
+                    <div class="text-center">
+                        This wonderful video captures the so called 'Alive' tour and was produced together with our friend and talented videographer Alessandro Rovere. He was the first to enjoy arrangements for guided tours and unforgettable activities. The breathtaking 'Alive' tour is offered by the Indian guide JD and reflects the potpourri of emotions and moods that you can expect from our platform. Ready to hit the road and to gain a new perspective on travel - fun, original and mind-expanding? Drop us a short note via email and be part of our growing community. We are happy to mediate the contact to our Indian guide network, providing you with everything ranging from guided tours to overnight stays.
+                        Backpack better with betterbackpacking!
+
+                    </div>
+                    <div class="text-center">  <a target="_blank" href="http://alessandro-rovere.de/">website</a></div>
+                    <div class="text-center">   <a target="_blank" href="http://facebook.com/alessandroroverevisual">facebook</a></div>
+                    <div class="text-center"><a target="_blank" href="http://instagram.com/generalhappy/">instagram</a></div>
+
+                    <!--<p class="text-center"><a href="http://www.bootstrapzero.com">Download at BootstrapZero</a></p>-->
+                    <br/>
+                    <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true"> OK </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<div class="footer">
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAvBcmApfKtIdaYyvSKjfoDTLj4j-GKBvY"></script>
+<!--    <div class="next col-xs-12 col-sm-4 col-md-4 col-md-offset-4">
+</div> -->
+<!--<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
+<!--<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
+
+<!--<script src="/travel/js/jquery.min.js"></script>-->
+<!--<script src="/travel/js/owl.carousel.min.js"></script>-->
+<!--&lt;!&ndash;<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>&ndash;&gt;-->
+<!--<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAvBcmApfKtIdaYyvSKjfoDTLj4j-GKBvY"></script>-->
+<!--<script src="/travel/js/script.js"></script>-->
+<!--<script src="/travel/js/scripts.js" ></script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+</body>
+</html>

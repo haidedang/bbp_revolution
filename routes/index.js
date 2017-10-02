@@ -23,6 +23,10 @@ router.get('/ENlearn', function(req, res, next) {
     res.render('ENlearn');
 });
 
+router.get('/ENtravel', function(req, res, next) {
+    res.render('ENtravel');
+});
+
 router.get('/datenschutz', function(req, res, next) {
     res.render('datenschutz');
 });
