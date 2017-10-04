@@ -85,10 +85,15 @@ a:focus {
     outline: 0;
 }
 
+.ueberschrift{
+    color: rgb(255, 241, 210);
 
+}
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
+    /*font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;*/
+    font-family: 'Josefin Slab', serif;
+    color: rgb(255, 241, 210);
 }
 
 p {
