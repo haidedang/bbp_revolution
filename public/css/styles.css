@@ -726,7 +726,7 @@ html, body, .container-table {
     margin-bottom:40px;
 }
 input::placeholder {
-    color: #fff !important;
+    color: #45494F  !important;
 }
 .btn-lg {
     font-size: 1em;

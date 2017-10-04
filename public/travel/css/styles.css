@@ -61,7 +61,7 @@ p{
 .day-div{
     height: 50px;
     width: 350px;
-    background: #302746;
+    background: rgba(56, 92, 99, 0.8);
     border-radius: 7px;
     margin-bottom: 5px;
     cursor: pointer;
@@ -137,7 +137,7 @@ p{
     transform: translateX(20px);
 }
 .button{
-    background: #a34b4b;
+    background: rgba(56, 92, 99, 0.8);
     /* Green */
     padding: 15px 32px;
     border-radius: 12px;
@@ -260,7 +260,7 @@ right: 0;
 }
 .button2{
     margin-top: 40px;
-    background: #a34b4b;
+    background: rgba(56, 92, 99, 0.8);
 }
 .book-now .two{
     top: -1800px;
