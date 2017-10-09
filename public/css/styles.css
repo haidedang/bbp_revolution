@@ -86,7 +86,8 @@ a:focus {
 }
 
 .ueberschrift{
-    color: rgb(255, 241, 210);
+    /*color: rgb(255, 241, 210);*/
+    color:rgb(232, 162, 20);
 
 }
 
@@ -315,7 +316,7 @@ header {
     color: #fff;
     width: 100%;
     background-color: #c9c9c9;
-    background-image: url('http://demo.themeton.com/travel/wp-content/uploads/sites/62/2016/04/photo-1443890923422-7819ed4101c0.jpg');
+    background: url(../images/P1070819.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
